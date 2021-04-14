@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Cientifico
+  - Acido
+  - Fuerte
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Interfaz
+    uniqueID: 2626506243
+    locked: 0
+  - name: fuerte
+    uniqueID: 3034284897
+    locked: 0
+  - name: acido
+    uniqueID: 373830555
+    locked: 0
+  - name: cientifico
+    uniqueID: 3236554319
+    locked: 0
