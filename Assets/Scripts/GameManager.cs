@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         poderHabilidad += 10;
 
         // aumenta el tamaño de Melvin
-        melvin.GetComponent<MelvinGrowth>().GrowMelvin();
+        melvin.GetComponentInChildren<MelvinGrowth>().GrowMelvin();
         //Invoco UIManager para actualizar la vida max
         SetUIManager(theUIManager);
     }
