@@ -564,6 +564,7 @@ MonoBehaviour:
   vidaActual: 100
   barraVida: {fileID: 882765386}
   numVida: {fileID: 161141883}
+  PanelOpciones: {fileID: 0}
 --- !u!114 &448498593
 MonoBehaviour:
   m_ObjectHideFlags: 0

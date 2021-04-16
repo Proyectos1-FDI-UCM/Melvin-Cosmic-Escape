@@ -9,12 +9,13 @@ public class UIManager : MonoBehaviour
      public float vidaMax, vidaActual;
     public Image barraVida;
     public Text numVida;
+    public GameObject PanelOpciones;
     GameManager gm;
     void Start()
     {
         gm = GameManager.GetInstance();
         GameManager.GetInstance().SetUIManager(this);
-
+        PanelOpciones.SetActive(false);
     }
     //Metodo con el cual actualizamos la barra de vida junto a su porcentaje
     public void takeDamage(float vidaActual, float vidaMax)
@@ -30,6 +31,10 @@ public class UIManager : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+    public void AbrirMenuOPC()
+    {        
+        PanelOpciones.SetActive(true);
     }
 
 }

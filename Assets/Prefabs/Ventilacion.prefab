@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8065372079604534830}
-  - component: {fileID: 8065372079604534831}
+  - component: {fileID: 6014979910120923728}
   m_Layer: 0
   m_Name: Ventilacion
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8065372079604534831
+--- !u!114 &6014979910120923728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,14 +42,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8065372079604534829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfc55ccaa91460b45b39686f9a473517, type: 3}
+  m_Script: {fileID: 11500000, guid: c0fee79564ca8fe4b98f1f07a56cbd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numVent: 2
+  numVent: 1
   spritesVent:
-  - {fileID: -8642530694501203497, guid: 99cc9eea48a7a434199efa26c2a72f9e, type: 3}
-  - {fileID: 4296412690333133558, guid: 99cc9eea48a7a434199efa26c2a72f9e, type: 3}
-  - {fileID: 2305383299128824967, guid: 99cc9eea48a7a434199efa26c2a72f9e, type: 3}
+  - {fileID: 21300000, guid: daa760f0adc14dc41a7de0089b125866, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8065372079827410571
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 8065372079827410580}
   - component: {fileID: 8065372079827410583}
   - component: {fileID: 8065372079827410582}
-  - component: {fileID: 8065372079827410581}
+  - component: {fileID: 7971494422604881897}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -160,7 +160,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!114 &8065372079827410581
+--- !u!114 &7971494422604881897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,10 +169,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8065372079827410571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 864d7f48b9dd572419f39986c380c775, type: 3}
+  m_Script: {fileID: 11500000, guid: 112c82daa0edbf647a110722bdc5051e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reposo: 1
+  reposo: 5
 --- !u!1 &8065372080261103477
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 8065372080261103478}
   - component: {fileID: 8065372080261103472}
   - component: {fileID: 8065372080261103479}
-  - component: {fileID: 8065372080261103473}
+  - component: {fileID: 6033430823868119451}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -283,7 +283,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!114 &8065372080261103473
+--- !u!114 &6033430823868119451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8065372080261103477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 864d7f48b9dd572419f39986c380c775, type: 3}
+  m_Script: {fileID: 11500000, guid: 112c82daa0edbf647a110722bdc5051e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reposo: 1
+  reposo: 5

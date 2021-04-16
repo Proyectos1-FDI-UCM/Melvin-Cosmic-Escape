@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DEMO/EscenaDemo3.unity
     guid: 3dff72a66570f404bab090007113437f
+  - enabled: 1
+    path: Assets/Scenes/ESCENASNombres/Menu.unity
+    guid: dd78f1fd4bee72f4695ca90ef7e36819
+  - enabled: 1
+    path: Assets/Scenes/ESCENASNombres/Javichu.unity
+    guid: a77728746a4cd9247a5601486c788b3d
   m_configObjects: {}
