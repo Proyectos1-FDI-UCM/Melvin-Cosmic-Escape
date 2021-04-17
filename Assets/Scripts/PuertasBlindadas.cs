@@ -8,27 +8,24 @@ public class PuertasBlindadas : MonoBehaviour
     public Sprite PuertaAbiertaB;
     SpriteRenderer PuertaCerradaB;
     int poder;
+    GameManager gm;
 
     void Start()
     {
         PuertaCerradaB = GetComponent<SpriteRenderer>();
-
+        gm = GameManager.GetInstance();
         print(poder);
 
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        print("aaaaa");
-
-        if (collision.collider.gameObject.GetComponent<PosesionController>() != null && Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
-            print("uuuuuu");
-            poder = collision.collider.gameObject.GetComponent<GameManager>().poderHabilidad;
-            
-            print(poder);
 
-            if (poder == poderPuertas)
+            print("aaaaa");
+
+            if (gm.poderHabilidad == poderPuertas)
             {
                 PuertaCerradaB.sprite = PuertaAbiertaB;
                 GetComponent<Collider2D>().enabled = false;
