@@ -31,10 +31,10 @@ public class UIManager : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-    }
-    public void AbrirMenuOPC()
-    {        
-        PanelOpciones.SetActive(true);
+    }    
+    public void Exit()
+    {
+        Application.Quit();
     }
 
 }
