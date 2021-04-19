@@ -35,11 +35,11 @@ public class PosesionController : MonoBehaviour
         if (Input.GetKey(KeyCode.T) && !poseyendo && !enProceso)
         {
             //Nos aseguramos de que solo interactue con un enemigo a la vez
-            if (other == null)
+            if (other == null || other.layer != 8 || other.layer != 9 || other.layer != 10)
                 other = collision2D.gameObject;
 
             if (other != null)
-                switch (other.gameObject.layer)
+                switch (other.layer)
                 {
                     case 8:     //Este es el numero de capa del enemigo científico
 
