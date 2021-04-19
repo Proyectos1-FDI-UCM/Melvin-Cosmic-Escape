@@ -42,12 +42,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8065372079604534829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0fee79564ca8fe4b98f1f07a56cbd52, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d90e943bcee8c342b8e234be906658f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   numVent: 1
   spritesVent:
-  - {fileID: 21300000, guid: daa760f0adc14dc41a7de0089b125866, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
 --- !u!1 &8065372079827410571
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8065372079827410571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 112c82daa0edbf647a110722bdc5051e, type: 3}
+  m_Script: {fileID: 11500000, guid: e0d08dcbbdb56b54889a63985bf34b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   reposo: 5
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8065372080261103477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 112c82daa0edbf647a110722bdc5051e, type: 3}
+  m_Script: {fileID: 11500000, guid: e0d08dcbbdb56b54889a63985bf34b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   reposo: 5
