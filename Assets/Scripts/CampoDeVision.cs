@@ -4,28 +4,35 @@ using UnityEngine;
 
 public class CampoDeVision : MonoBehaviour
 {
+    private Mesh mesh;
+    private Vector3 origen;
+    private float anguloInicial;
+    float anguloVision;
+    public bool melvinEncontrado;
     void Start()
     {
-        Mesh mesh = new Mesh();
+        mesh = new Mesh();
         // Asignamos nuestra malla (mesh) a la del componente
         GetComponent<MeshFilter>().mesh = mesh;
 
         // Variables para las dimensiones del campo de visión
-        float anguloVision = 35f; //Ángulo total de visión
+        anguloVision = 90f; // Ángulo total de visión
+        //origen = Vector3.zero;
+    }
+
+    void LateUpdate()
+    {
         int rayosVision = 50; // Cuántos rayos de visión se castean
-        float anguloActual = 0f; // Irá aumentando en cada interacción
-        float anguloIncremento = anguloVision / rayosVision; // Cuánto aumenta el ángulo por cada rayo de visión
+        float anguloActual = anguloInicial; // Irá aumentando en cada interacción
+        float incrementoAngulo = anguloVision / rayosVision; // Cuánto aumenta el ángulo por cada rayo de visión
         float longitudVision = 5f;
-        Vector3 origen = GetComponent<Transform>().position; // El origen está en la posición del enemigo al que va asociado este script
+
+        //Debug.Log("Posición origen: " + origen);
 
         // Creamos una serie de variables que definen a mesh
         Vector3[] vertices = new Vector3[rayosVision + 2]; // Hay que contar el vértice origen y el primero
         Vector2[] uv = new Vector2[rayosVision + 2];
         int[] triangulos = new int[rayosVision * 3];
-
-        /* vertices[0] = Vector2.zero;
-        vertices[1] = new Vector2(50,0);
-        vertices[2] = new Vector2(0, -50); */
 
         vertices[0] = origen;
 
@@ -33,45 +40,67 @@ public class CampoDeVision : MonoBehaviour
         int indiceTriangulos = 0;
         for (int i = 0; i <= rayosVision; i++)
         {
-            // Para evitar hacer una distinción casos, voy colocando cada vértice en el lugar que viene dado por la siguiente fórmula:
-            Vector3 vertice = origen + TransformaAnguloAVector(anguloActual) * longitudVision;
+            // Voy colocando cada vértice en el lugar que le corresponde
+            Vector3 vertice;
+            RaycastHit2D raycast = Physics2D.Raycast(origen, TransformaAnguloAVector(anguloActual), longitudVision);
+
+            if (raycast.collider == null)
+            {
+                vertice = origen + TransformaAnguloAVector(anguloActual) * longitudVision;
+            }
+            else
+            {
+                //Debug.Log("Punto: " + raycast.point + " " + raycast.collider.name);
+                vertice = raycast.point;
+
+                if (raycast.collider.GetComponentInParent<MelvinController>() && !raycast.collider.GetComponent<EnemigoCientifico>())
+                {
+                    melvinEncontrado = true;
+                    Debug.Log("Melvin encontrado!");
+                }
+            }
             vertices[indiceVertices] = vertice;
 
             if (i > 0) // Evita hacer esta asignación en el origen
-            {
-                triangulos[indiceTriangulos] = 0; // un vértice del triángulo siempre va a estar en el origen (vertices[0]) 
+            { 
+                triangulos[indiceTriangulos + 0] = 0; // un vértice del triángulo siempre va a estar en el origen (vertices[0]) 
                 triangulos[indiceTriangulos + 1] = indiceVertices - 1;
                 triangulos[indiceTriangulos + 2] = indiceVertices;
+
                 indiceTriangulos += 3;
             }
 
-
             indiceVertices++;
-            anguloActual -= anguloIncremento; // resta ya que va en sentido antihorario
+            anguloActual -= incrementoAngulo; // resta ya que va en sentido antihorario
 
         }
 
-        /*// El entero de triangulos, corresponde con una posición del array vertices 
-        triangulos[0] = 0;
-        triangulos[0] = 1;
-        triangulos[0] = 2; */
-
-        // Asignamos las variables creadas a mesh
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangulos;
+    }   
 
+    static Vector3 TransformaAnguloAVector(float angle)
+    {
+        float angleRad = angle * (Mathf.PI / 180);
+        return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
     }
 
-    void Update()
+    static float TransformaVectorAAngulo(Vector3 vector)
     {
-        
+        vector = vector.normalized;
+        float angulo = Mathf.Atan2(vector.x, vector.y) * Mathf.Rad2Deg;
+        if (angulo < 0) angulo += 360;
+
+        return angulo;
+    }
+    public void Origen(Vector3 nuevoOrigen)
+    {
+        origen = nuevoOrigen;
     }
 
-    // Este método transforma un valor en grados a su equivalente Vector3
-    static Vector3 TransformaAnguloAVector(float angulo)
+    public void Direccion(Vector3 direccion)
     {
-        float anguloRad = angulo * (Mathf.PI / 180f);
-        return (new Vector3(Mathf.Cos(anguloRad), Mathf.Sin(anguloRad)));
+        anguloInicial = TransformaVectorAAngulo(direccion) - (anguloVision / 2f); 
     }
 }

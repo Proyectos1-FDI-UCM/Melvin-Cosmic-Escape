@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DEMO/EscenaDemo4.unity
-    guid: 5eb24a1c1e1d9bd47b96e15ac501cfc8
+    path: Assets/Scenes/ESCENASNombres/Menu.unity
+    guid: a65e099909246ee449a2d1c45fc04e41
+  - enabled: 1
+    path: Assets/Scenes/ESCENASNombres/Javichu.unity
+    guid: a625301502e986447855be9be08668d9
   - enabled: 1
     path: Assets/Scenes/DEMO/EscenaDemo1.unity
     guid: 60e529aec313d85498fd2293e14c9fbb
@@ -18,9 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/DEMO/EscenaDemo3.unity
     guid: 3dff72a66570f404bab090007113437f
   - enabled: 1
-    path: Assets/Scenes/ESCENASNombres/Menu.unity
-    guid: dd78f1fd4bee72f4695ca90ef7e36819
-  - enabled: 1
-    path: Assets/Scenes/ESCENASNombres/Javichu.unity
-    guid: a77728746a4cd9247a5601486c788b3d
+    path: Assets/Scenes/DEMO/EscenaDemo4.unity
+    guid: 5eb24a1c1e1d9bd47b96e15ac501cfc8
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
