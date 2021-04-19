@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     float vidaActual = 100;
     
     // Variables del poder del jugador
-    int poderHabilidad = 0;
+    public int poderHabilidad = 0;
 
     // Variable que lleva el recuento de con cuántos Glops se ha fusionado
     int glopsFusionados = 0;
@@ -86,5 +86,14 @@ public class GameManager : MonoBehaviour
         Debug.Log(vidaActual);
     }
 
+
+    public void CurarVida (int vidaCurada)
+    {
+        if (vidaActual < vidaMaxima)
+        {
+            vidaActual = vidaActual + vidaCurada;
+            SetUIManager(theUIManager);
+        }
+    }
     
 }
