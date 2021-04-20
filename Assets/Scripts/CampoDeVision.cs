@@ -47,6 +47,7 @@ public class CampoDeVision : MonoBehaviour
             if (raycast.collider == null)
             {
                 vertice = origen + TransformaAnguloAVector(anguloActual) * longitudVision;
+                melvinEncontrado = false;
             }
             else
             {
@@ -58,6 +59,7 @@ public class CampoDeVision : MonoBehaviour
                     melvinEncontrado = true;
                     Debug.Log("Melvin encontrado!");
                 }
+                
             }
             vertices[indiceVertices] = vertice;
 
