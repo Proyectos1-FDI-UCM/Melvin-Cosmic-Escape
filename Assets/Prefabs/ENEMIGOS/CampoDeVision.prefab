@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c345a8832750644977ff8a279d481b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  melvinEncontrado: 0
 --- !u!33 &7411286636239173535
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -71,7 +72,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 20fe03f98b778c84b8302d30b2a64374, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
