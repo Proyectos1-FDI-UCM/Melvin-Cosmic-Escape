@@ -8,8 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public float vidaMax, vidaActual;
     public Image barraVida;
-    public Text numVida;
-    public GameObject PanelOpciones;
+    public Text numVida; 
     GameManager gm;
     public GameObject PanelGanar;
     public GameObject PanelPerder;
@@ -18,8 +17,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         gm = GameManager.GetInstance();
-        GameManager.GetInstance().SetUIManager(this);
-        PanelOpciones.SetActive(false);
+        GameManager.GetInstance().SetUIManager(this);       
     }
     //Metodo con el cual actualizamos la barra de vida junto a su porcentaje
     public void takeDamage(float vidaActual, float vidaMax)
