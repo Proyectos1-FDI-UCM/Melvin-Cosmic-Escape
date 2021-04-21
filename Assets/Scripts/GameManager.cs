@@ -95,5 +95,10 @@ public class GameManager : MonoBehaviour
             SetUIManager(theUIManager);
         }
     }
+
+    public void GanarPartida ()
+    {
+        theUIManager.Ganar();
+    }
     
 }
