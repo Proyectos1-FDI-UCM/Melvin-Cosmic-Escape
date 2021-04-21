@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         //Si no tiene instancia ya creada, almacena la actual
-        /*if (instance == null)
+        if (instance == null)
         {
             instance = this;
 
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         {
             //Si ya hay instancia creada lo destruye porque no se necesita otro
             Destroy(this);
-        }*/
+        }
     }
 
     //Permite a los otros objetos conocer el estado de la instancia del game manager pero sin poder acceder a ella
