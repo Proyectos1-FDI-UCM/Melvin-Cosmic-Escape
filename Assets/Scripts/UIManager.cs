@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
     public GameObject PanelPerder;
     public Text ganar;
 
+    public BarraPosesion barraPosesion;
+
     void Start()
     {
         gm = GameManager.GetInstance();
@@ -59,5 +61,14 @@ public class UIManager : MonoBehaviour
     {
         PanelGanar.SetActive(false);
         PanelPerder.SetActive(false);
+    }
+    
+    public void BarraPosesion()
+    {
+        //Pausa el juego
+        GameManager.GetInstance().Pausa(true);
+
+        //Activa la barra de posesion que a su vez iniciara todo su tinglado
+        barraPosesion.gameObject.SetActive(true);
     }
 }

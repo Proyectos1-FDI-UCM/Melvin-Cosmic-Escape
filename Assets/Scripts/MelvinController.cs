@@ -19,22 +19,27 @@ public class MelvinController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //input del jugador
-        float deltaX = Input.GetAxis("Horizontal");
-        float deltaY = Input.GetAxis("Vertical");
-        movimiento = new Vector2(deltaX, deltaY);
+        //Nueva condicion de si el juego esta en pausa
+        if (!GameManager.GetInstance().pausa)
+        {
+            //input del jugador
+            float deltaX = Input.GetAxis("Horizontal");
+            float deltaY = Input.GetAxis("Vertical");
+            movimiento = new Vector2(deltaX, deltaY);
 
-        if (deltaX < 0)
-            transform.rotation = new Quaternion(0, -180, 0, 0);
-        else if (deltaX > 0)
-            transform.rotation = new Quaternion(0, 0, 0, 0);
-        /*else if (deltaY > 0)
-            transform.rotation = new Quaternion(0, 0, 45, 45);
-        else if (deltaY < 0)
-            transform.rotation = new Quaternion(0, 0, 45, -45);*/
+            if (deltaX < 0)
+                transform.rotation = new Quaternion(0, -180, 0, 0);
+            else if (deltaX > 0)
+                transform.rotation = new Quaternion(0, 0, 0, 0);
+            /*else if (deltaY > 0)
+                transform.rotation = new Quaternion(0, 0, 45, 45);
+            else if (deltaY < 0)
+                transform.rotation = new Quaternion(0, 0, 45, -45);*/
 
-        if (Input.GetKey(KeyCode.T) && posesionController.poseyendo)
-            posesionController.Desposeer();
+            if (Input.GetKey(KeyCode.T) && posesionController.poseyendo)
+                posesionController.Desposeer();
+        }
+        else movimiento = new Vector2(0, 0); ;
 
     }
     void FixedUpdate()
