@@ -38,7 +38,7 @@ public class PosesionController : MonoBehaviour
         if (Input.GetKey(KeyCode.T) && !poseyendo && !enProceso)
         {
             //Nos aseguramos de que solo interactue con un enemigo a la vez
-            if (other == null || (other.layer != 8 && other.layer != 9 && other.layer != 10))
+            if(other == null || other.layer != 8 || other.layer != 9 || other.layer != 10)
             {
                 other = collision2D.gameObject;
             }
