@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     //Array que contiene los niveles del juego, se controla desde el editor
     public string[] scenesInOrder;
 
+    public bool pausa;
 
     //Variable que almacena la instancia del GameManager
     private static GameManager instance;
@@ -68,28 +69,34 @@ public class GameManager : MonoBehaviour
     // se llama a este método cuando un glop entra en contacto con Melvin
     public void GlopFusionado()
     {
-        glopsFusionados++;
-        vidaMaxima++;
-        vidaActual = vidaMaxima;
-        poderHabilidad += 10;
+        if (!pausa)
+        {
+            glopsFusionados++;
+            vidaMaxima++;
+            vidaActual = vidaMaxima;
+            poderHabilidad += 10;
 
-        // aumenta el tamaño de Melvin
-        melvin.GetComponentInChildren<MelvinGrowth>().GrowMelvin();
-        //Invoco UIManager para actualizar la vida max
-        SetUIManager(theUIManager);
+            // aumenta el tamaño de Melvin
+            melvin.GetComponentInChildren<MelvinGrowth>().GrowMelvin();
+            //Invoco UIManager para actualizar la vida max
+            SetUIManager(theUIManager);
+        }
     }
 
     public void Pisarcharco()
     {
-        vidaActual = 0;
-        theUIManager.takeDamage(vidaActual, vidaMaxima);
-        Debug.Log(vidaActual);
+        if (!pausa)
+        {
+            vidaActual = 0;
+            theUIManager.takeDamage(vidaActual, vidaMaxima);
+            Debug.Log(vidaActual);
+        }
     }
 
 
     public void CurarVida (int vidaCurada)
     {
-        if (vidaActual < vidaMaxima)
+        if ((vidaActual < vidaMaxima && vidaCurada > 0) || (vidaActual > vidaCurada && vidaCurada < 0))
         {
             vidaActual = vidaActual + vidaCurada;
             SetUIManager(theUIManager);
@@ -99,6 +106,13 @@ public class GameManager : MonoBehaviour
     public void GanarPartida ()
     {
         theUIManager.Ganar();
+    }
+
+    //He tenido que declarar esta variable y metodo para que funcione todo esto :vv
+        //(aun faltarian añadir mas cosas que se vean afectadas por la pausa)
+    public void Pausa(bool estoyPerdiendoNeuronas)
+    {
+        pausa = estoyPerdiendoNeuronas;
     }
     
 }

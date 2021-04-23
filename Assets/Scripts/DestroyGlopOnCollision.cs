@@ -14,8 +14,8 @@ public class DestroyGlopOnCollision : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collider2D)
     {
-        // ...comprobará si ha colisionado con Melvin y además la tecla de interacción está pulsada
-        if (Input.GetKey(KeyCode.E) && collider2D.gameObject.GetComponent<MelvinGrowth>())
+        // ...comprobará si ha colisionado con Melvin y además la tecla de interacción está pulsada y de que no este en pausa
+        if (Input.GetKey(KeyCode.E) && collider2D.gameObject.GetComponent<MelvinGrowth>() && !gameManager.pausa)
         {
             // Destruirá al glop e informará de ello al GM
             Destroy(this.gameObject);

@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7411286636239173531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c345a8832750644977ff8a279d481b, type: 3}
+  m_Script: {fileID: 11500000, guid: 42a6c352c07e279469233db9b7014bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   melvinEncontrado: 0
@@ -72,7 +72,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 20fe03f98b778c84b8302d30b2a64374, type: 2}
+  - {fileID: 2100000, guid: e5dbee508df5c6244ad2965f4ca19c23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

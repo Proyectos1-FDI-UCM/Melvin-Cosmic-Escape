@@ -2,6 +2,8 @@
 
 public class PosesionController : MonoBehaviour
 {
+    public UIManager uiManager;
+
     public float reposoTrasPoseer;
 
     int cientif;
@@ -19,6 +21,7 @@ public class PosesionController : MonoBehaviour
     //Hay que declarar: el prefab del enemigo de dentro de player y el prefab del enemigo por su cuenta para cada uno
 
     private GameObject other;
+    int opc;
 
     public bool poseyendo;
     bool enProceso;
@@ -35,79 +38,98 @@ public class PosesionController : MonoBehaviour
         if (Input.GetKey(KeyCode.T) && !poseyendo && !enProceso)
         {
             //Nos aseguramos de que solo interactue con un enemigo a la vez
-            if (other == null || other.layer != 8 || other.layer != 9 || other.layer != 10)
+            if (other == null || (other.layer != 8 && other.layer != 9 && other.layer != 10))
+            {
                 other = collision2D.gameObject;
+            }
 
             if (other != null)
-                switch (other.layer)
-                {
-                    case 8:     //Este es el numero de capa del enemigo científico
-
-                        enProceso = true;
-
-                        // Pasa a ser el enemigo poseido
-                        melvin.SetActive(false);
-                        cientifico.SetActive(true);
-
-                        //Pasa a estar en la misma posicion
-                        transform.position = other.gameObject.transform.position;
-
-                        cientif = other.gameObject.GetComponent<EnemigoCientifico>().numCientifico;
-                        this.GetComponentInChildren<EnemigoCientifico>().numCientifico = cientif;
-
-                        //Destruimos el gameobject del enemigo que acabamos de poseer
-                        Destroy(other.gameObject);
-
-                        //Declaramos poseyendo = true (supongo que nos servira mas adelante), y a lo mejor deberia estar en el GM?????
-
-                        //Esta en un invoke ya que al intentar poseer se llamaba al metodo desposeer desde el melvin controller al instante.
-                        Invoke("ConfirmarPosesion", reposoTrasPoseer);
-
-                        break;
-                    case 9:     //Este es el numero de capa del enemigo ácido
-
-                        enProceso = true;
-
-                        // Pasa a ser el enemigo poseido
-                        melvin.SetActive(false);
-                        acido.SetActive(true);
-
-                        //Pasa a estar en la misma posicion
-                        transform.position = other.gameObject.transform.position;
-
-                        //Destruimos el gameobject del enemigo que acabamos de poseer
-                        Destroy(other.gameObject);
-
-                        //Declaramos poseyendo = true (supongo que nos servira mas adelante), y a lo mejor deberia estar en el GM?????
-
-                        //Esta en un invoke ya que al intentar poseer se llamaba al metodo desposeer desde el melvin controller al instante.
-                        Invoke("ConfirmarPosesion", reposoTrasPoseer);
-
-                        break;
-
-                    case 10:     //Este es el numero de capa del enemigo fuerte
-
-                        enProceso = true;
-
-                        // Pasa a ser el enemigo poseido
-                        melvin.SetActive(false);
-                        fuerte.SetActive(true);
-
-                        //Pasa a estar en la misma posicion
-                        transform.position = other.gameObject.transform.position;
-
-                        //Destruimos el gameobject del enemigo que acabamos de poseer
-                        Destroy(other.gameObject);
-
-                        //Declaramos poseyendo = true (supongo que nos servira mas adelante), y a lo mejor deberia estar en el GM?????
-
-                        //Esta en un invoke ya que al intentar poseer se llamaba al metodo desposeer desde el melvin controller al instante.
-                        Invoke("ConfirmarPosesion", reposoTrasPoseer);
-
-                        break;
-                        //Se añade un case de este mismo estilo para cada enemigo
-                }
+                //Llamamos al Uimanager para que inicie el proceso
+                uiManager.BarraPosesion();
         }
+    }
+
+    public void Posee(int opc)
+    {
+        //Declaramos enProceso a true y tras el reposo vuelve a false, para controlar cuando puede poseer(se puede quitar sin mucho problema)
+        enProceso = true;
+        Invoke(nameof(FinCooldown), reposoTrasPoseer);
+
+        //Si le llega 1 ocurre la posesion normal
+        if (opc == 1)
+        {
+            switch (other.layer)
+            {
+                case 8:     //Este es el numero de capa del enemigo científico
+
+                    enProceso = true;
+
+                    // Pasa a ser el enemigo poseido
+                    melvin.SetActive(false);
+                    cientifico.SetActive(true);
+
+                    //Pasa a estar en la misma posicion
+                    transform.position = other.gameObject.transform.position;
+
+                    cientif = other.gameObject.GetComponent<EnemigoCientifico>().numCientifico;
+                    this.GetComponentInChildren<EnemigoCientifico>().numCientifico = cientif;
+
+                    //Destruimos el gameobject del enemigo que acabamos de poseer
+                    Destroy(other.gameObject);
+
+                    //Declaramos poseyendo = true (supongo que nos servira mas adelante), y a lo mejor deberia estar en el GM?????
+
+                    //Esta en un invoke ya que al intentar poseer se llamaba al metodo desposeer desde el melvin controller al instante.
+                    Invoke("ConfirmarPosesion", reposoTrasPoseer);
+
+                    break;
+                case 9:     //Este es el numero de capa del enemigo ácido
+
+                    enProceso = true;
+
+                    // Pasa a ser el enemigo poseido
+                    melvin.SetActive(false);
+                    acido.SetActive(true);
+
+                    //Pasa a estar en la misma posicion
+                    transform.position = other.gameObject.transform.position;
+
+                    //Destruimos el gameobject del enemigo que acabamos de poseer
+                    Destroy(other.gameObject);
+
+                    //Declaramos poseyendo = true (supongo que nos servira mas adelante), y a lo mejor deberia estar en el GM?????
+
+                    //Esta en un invoke ya que al intentar poseer se llamaba al metodo desposeer desde el melvin controller al instante.
+                    Invoke("ConfirmarPosesion", reposoTrasPoseer);
+
+                    break;
+
+                case 10:     //Este es el numero de capa del enemigo fuerte
+
+                    enProceso = true;
+
+                    // Pasa a ser el enemigo poseido
+                    melvin.SetActive(false);
+                    fuerte.SetActive(true);
+
+                    //Pasa a estar en la misma posicion
+                    transform.position = other.gameObject.transform.position;
+
+                    //Destruimos el gameobject del enemigo que acabamos de poseer
+                    Destroy(other.gameObject);
+
+                    //Declaramos poseyendo = true (supongo que nos servira mas adelante), y a lo mejor deberia estar en el GM?????
+
+                    //Esta en un invoke ya que al intentar poseer se llamaba al metodo desposeer desde el melvin controller al instante.
+                    Invoke("ConfirmarPosesion", reposoTrasPoseer);
+
+                    break;
+                    //Se añade un case de este mismo estilo para cada enemigo
+            }
+        }
+        //He modificado el CurarVida para que tambien acepte valores negativos y no pete
+        else if (opc == 2)
+            GameManager.GetInstance().CurarVida(-30);
     }
 
     void ConfirmarPosesion()
@@ -118,6 +140,10 @@ public class PosesionController : MonoBehaviour
     void ConfirmarDesposesion()
     {
         poseyendo = false;
+    }
+    void FinCooldown()
+    {
+        enProceso = false;
     }
 
     public void Desposeer()
