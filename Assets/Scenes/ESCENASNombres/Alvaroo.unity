@@ -564,6 +564,10 @@ MonoBehaviour:
   vidaActual: 100
   barraVida: {fileID: 882765386}
   numVida: {fileID: 161141883}
+  PanelGanar: {fileID: 0}
+  PanelPerder: {fileID: 0}
+  ganar: {fileID: 0}
+  barraPosesion: {fileID: 0}
 --- !u!114 &448498593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,7 +867,7 @@ Transform:
   m_GameObject: {fileID: 659997478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.66, y: 5.88, z: 0}
-  m_LocalScale: {x: 18.942926, y: 1, z: 1}
+  m_LocalScale: {x: 18.942924, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 118041996}
   m_RootOrder: 0
@@ -1588,6 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesInOrder: []
+  pausa: 0
   melvin: {fileID: 885161083}
   poderHabilidad: 0
 --- !u!1001 &1795132116
