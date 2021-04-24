@@ -564,6 +564,10 @@ MonoBehaviour:
   vidaActual: 100
   barraVida: {fileID: 882765386}
   numVida: {fileID: 161141883}
+  PanelGanar: {fileID: 0}
+  PanelPerder: {fileID: 0}
+  ganar: {fileID: 0}
+  barraPosesion: {fileID: 0}
 --- !u!114 &448498593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1588,6 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesInOrder: []
+  pausa: 0
   melvin: {fileID: 885161083}
   poderHabilidad: 0
 --- !u!1001 &1795132116
