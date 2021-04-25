@@ -48,21 +48,23 @@ public class UIManager : MonoBehaviour
     public void Ganar()
     {
         PanelGanar.SetActive(true);
-        Invoke("Fuera", 2f);
+        Invoke("Fuera", 3);
+
     }
     public void Perder()
     {
         PanelPerder.SetActive(true);
-        Invoke("Fuera", 2f);
+        Invoke("Fuera", 3);
     }
 
-
-    void Fuera ()
+    void Fuera()
     {
         PanelGanar.SetActive(false);
         PanelPerder.SetActive(false);
+
+        ChangeScene("Menu");
     }
-    
+
     public void BarraPosesion()
     {
         //Pausa el juego

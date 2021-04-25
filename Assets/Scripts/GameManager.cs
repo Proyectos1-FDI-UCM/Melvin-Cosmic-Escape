@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour
         {
             vidaActual = 0;
             theUIManager.takeDamage(vidaActual, vidaMaxima);
+            theUIManager.Perder();
             Debug.Log(vidaActual);
         }
     }
@@ -114,5 +115,8 @@ public class GameManager : MonoBehaviour
     {
         pausa = estoyPerdiendoNeuronas;
     }
-    
-}
+
+  
+    }
+
+

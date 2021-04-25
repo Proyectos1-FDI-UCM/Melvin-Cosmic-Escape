@@ -757,10 +757,10 @@ MonoBehaviour:
   vidaActual: 100
   barraVida: {fileID: 2736499974759593449}
   numVida: {fileID: 2736499972806384870}
-  PanelOpciones: {fileID: 0}
   PanelGanar: {fileID: 4096001081996879939}
   PanelPerder: {fileID: 8293808542179939016}
   ganar: {fileID: 0}
+  barraPosesion: {fileID: 0}
 --- !u!1 &2736499974759593452
 GameObject:
   m_ObjectHideFlags: 0
