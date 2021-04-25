@@ -27,5 +27,5 @@ public class AjusteBrillo : MonoBehaviour
         //cambiamos con el valor nuevo
         brightness.color = new Color(brightness.color.r, brightness.color.g, brightness.color.b, slider.value);
     }
-   
+  
 }
