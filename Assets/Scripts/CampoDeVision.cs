@@ -22,7 +22,7 @@ public class CampoDeVision : MonoBehaviour
 
     void LateUpdate()
     {
-        int rayosVision = 10; // Cuántos rayos de visión se castean
+        int rayosVision = 20; // Cuántos rayos de visión se castean
         float anguloActual = anguloInicial; // Irá aumentando en cada interacción
         float incrementoAngulo = anguloVision / rayosVision; // Cuánto aumenta el ángulo por cada rayo de visión
         float longitudVision = 5f;
