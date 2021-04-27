@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1324545818680786332}
   - component: {fileID: -3814663291880928610}
   - component: {fileID: 2360941926151554040}
+  - component: {fileID: 2775088707096043540}
+  - component: {fileID: 3135809008748798185}
   m_Layer: 0
   m_Name: Bala
   m_TagString: Untagged
@@ -131,3 +133,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0625, y: 0.0625}
   m_EdgeRadius: 0
+--- !u!114 &2775088707096043540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700985337213587121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8090ef3accefd644b903bba9e4ced2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3135809008748798185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700985337213587121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311bd582c7ce69948b2c0704051fa332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VelocityScale: 4

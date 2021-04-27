@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemigoSoldado : MonoBehaviour
 {
     [SerializeField] GameObject prefabCampo;
-    [SerializeField] GameObject bala;
+    
     CampoDeVision campo;
     void Awake()
     {
@@ -19,10 +19,6 @@ public class EnemigoSoldado : MonoBehaviour
         campo.Origen(this.transform.position);
         campo.Direccion(this.transform.rotation.eulerAngles); // dirección del fov
 
-        if (campo.melvinEncontrado)
-        {
-            Instantiate(bala, transform.position, transform.rotation);
-            Debug.Log("Bala disparada");
-        }
+        
     }
 }
