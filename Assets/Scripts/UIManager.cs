@@ -74,4 +74,5 @@ public class UIManager : MonoBehaviour
         //Activa la barra de posesion que a su vez iniciara todo su tinglado
         barraPosesion.gameObject.SetActive(true);
     }
+
 }
