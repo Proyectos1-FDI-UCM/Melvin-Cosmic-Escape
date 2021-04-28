@@ -12,7 +12,6 @@ public class UIManager : MonoBehaviour
     GameManager gm;
     public GameObject PanelGanar;
     public GameObject PanelPerder;
-    public Text ganar;
 
     public BarraPosesion barraPosesion;
 
