@@ -576,8 +576,10 @@ MonoBehaviour:
   vidaActual: 100
   barraVida: {fileID: 882765386}
   numVida: {fileID: 161141883}
-  PanelGanar: {fileID: 0}
-  PanelPerder: {fileID: 0}
+  PanelGanar: {fileID: 5416964276820685614, guid: 5845e87666331414fbbacf8b35a21b95,
+    type: 3}
+  PanelPerder: {fileID: 500022126522124276, guid: fa279e97b01f3c742b5d4791c0fe718d,
+    type: 3}
   ganar: {fileID: 0}
   barraPosesion: {fileID: 0}
 --- !u!114 &448498593

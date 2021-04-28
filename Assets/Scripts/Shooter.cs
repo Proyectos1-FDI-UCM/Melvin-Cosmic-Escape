@@ -13,7 +13,7 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        campo = Instantiate(prefabCampo, null).GetComponent<CampoDeVision>();
+        
     }
 
     // Update is called once per frame
