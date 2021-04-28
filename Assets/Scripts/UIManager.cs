@@ -12,14 +12,16 @@ public class UIManager : MonoBehaviour
     GameManager gm;
     public GameObject PanelGanar;
     public GameObject PanelPerder;
-    public Text ganar;
+    
 
     public BarraPosesion barraPosesion;
 
     void Start()
     {
         gm = GameManager.GetInstance();
-        GameManager.GetInstance().SetUIManager(this);       
+        GameManager.GetInstance().SetUIManager(this);
+        PanelGanar.SetActive(false);
+        PanelPerder.SetActive(false);
     }
     //Metodo con el cual actualizamos la barra de vida junto a su porcentaje
     public void takeDamage(float vidaActual, float vidaMax)
@@ -62,7 +64,8 @@ public class UIManager : MonoBehaviour
         PanelGanar.SetActive(false);
         PanelPerder.SetActive(false);
 
-        ChangeScene("Menu");
+        ChangeScene("MENU");
+        Cursor.visible = true;
     }
 
     public void BarraPosesion()
