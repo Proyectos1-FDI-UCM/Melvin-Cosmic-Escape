@@ -9,21 +9,29 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject prefabCampo;
     CampoDeVision campo;
 
+    bool retardo = false;
 
-    // Start is called before the first frame update
     void Awake()
     {
-        
+        campo = Instantiate(prefabCampo, null).GetComponent<CampoDeVision>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        campo.Origen(this.transform.position);
+        campo.Direccion(this.transform.rotation.eulerAngles); // dirección del fov
 
-        if (campo.melvinEncontrado)
+        if (campo.melvinEncontrado && !retardo)
         {
-            Instantiate(bala, -transform.position, transform.rotation);
+            Instantiate(bala, transform.position, transform.rotation);
             Debug.Log("Bala disparada");
+            retardo = true;
+            Invoke("DeshacerRetardo",1f);
         }
+    }
+
+    void DeshacerRetardo()
+    {
+        retardo = false;
     }
 }

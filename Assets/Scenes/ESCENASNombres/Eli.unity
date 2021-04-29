@@ -413,7 +413,7 @@ PrefabInstance:
     - target: {fileID: 7305450413497074134, guid: af8eee3fe066f794ba5c635191291e8f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.82
+      value: 2.06
       objectReference: {fileID: 0}
     - target: {fileID: 7305450413497074134, guid: af8eee3fe066f794ba5c635191291e8f,
         type: 3}
@@ -635,7 +635,6 @@ MonoBehaviour:
   numVida: {fileID: 161141883}
   PanelGanar: {fileID: 0}
   PanelPerder: {fileID: 0}
-  ganar: {fileID: 0}
   barraPosesion: {fileID: 0}
 --- !u!114 &448498593
 MonoBehaviour:

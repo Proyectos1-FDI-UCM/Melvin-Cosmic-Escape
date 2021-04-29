@@ -126,7 +126,13 @@ public class GameManager : MonoBehaviour
         pausa = estoyPerdiendoNeuronas;
     }
 
-  
+    public Vector2 PosicionDisparo()
+    {
+        return melvin.transform.position;
     }
+
+
+  
+}
 
 

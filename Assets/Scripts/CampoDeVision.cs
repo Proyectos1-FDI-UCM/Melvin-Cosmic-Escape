@@ -22,6 +22,7 @@ public class CampoDeVision : MonoBehaviour
 
     void LateUpdate()
     {
+
         int rayosVision = 20; // Cuántos rayos de visión se castean
         float anguloActual = anguloInicial; // Irá aumentando en cada interacción
         float incrementoAngulo = anguloVision / rayosVision; // Cuánto aumenta el ángulo por cada rayo de visión
@@ -44,7 +45,7 @@ public class CampoDeVision : MonoBehaviour
             Vector3 vertice;
             RaycastHit2D raycast = Physics2D.Raycast(origen, TransformaAnguloAVector(anguloActual), longitudVision);
 
-            if (raycast.collider == null)
+            if (raycast.collider == null || raycast.collider.GetComponent<Bala>())
             {
                 vertice = origen + TransformaAnguloAVector(anguloActual) * longitudVision;
                 melvinEncontrado = false;
@@ -57,10 +58,14 @@ public class CampoDeVision : MonoBehaviour
                 if (raycast.collider.GetComponentInParent<MelvinController>() && !raycast.collider.GetComponent<EnemigoCientifico>())
                 {
                     melvinEncontrado = true;
-                    Debug.Log("Melvin encontrado!");
+                    //Debug.Log("Melvin encontrado!");
                 }
-                
+                else
+                {
+                    melvinEncontrado = false;
+                }
             }
+
             vertices[indiceVertices] = vertice;
 
             if (i > 0) // Evita hacer esta asignación en el origen

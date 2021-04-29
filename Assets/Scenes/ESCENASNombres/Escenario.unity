@@ -364,7 +364,6 @@ MonoBehaviour:
   numVida: {fileID: 577233280}
   PanelGanar: {fileID: 0}
   PanelPerder: {fileID: 0}
-  ganar: {fileID: 0}
   barraPosesion: {fileID: 0}
 --- !u!114 &664069970
 MonoBehaviour:
@@ -1708,7 +1707,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -10, y: -5, z: 0}
-  m_Size: {x: 38, y: 10, z: 1}
+  m_Size: {x: 38, y: 11, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
