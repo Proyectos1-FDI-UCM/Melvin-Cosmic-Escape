@@ -24,7 +24,7 @@ public class Shooter : MonoBehaviour
         if (campo.melvinEncontrado && !retardo)
         {
             Instantiate(bala, transform.position, transform.rotation);
-            Debug.Log("Bala disparada");
+            //Debug.Log("Bala disparada");
             retardo = true;
             Invoke("DeshacerRetardo",1f);
         }

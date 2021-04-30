@@ -26,7 +26,7 @@ public class CampoDeVision : MonoBehaviour
         int rayosVision = 20; // Cuántos rayos de visión se castean
         float anguloActual = anguloInicial; // Irá aumentando en cada interacción
         float incrementoAngulo = anguloVision / rayosVision; // Cuánto aumenta el ángulo por cada rayo de visión
-        float longitudVision = 5f;
+        float longitudVision = 3f;
 
         //Debug.Log("Posición origen: " + origen);
 
@@ -58,7 +58,7 @@ public class CampoDeVision : MonoBehaviour
                 if (raycast.collider.GetComponentInParent<MelvinController>() && !raycast.collider.GetComponent<EnemigoCientifico>())
                 {
                     melvinEncontrado = true;
-                    //Debug.Log("Melvin encontrado!");
+                    Debug.Log("Melvin encontrado!");
                 }
                 else
                 {
