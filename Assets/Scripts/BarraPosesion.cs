@@ -49,10 +49,14 @@ public class BarraPosesion : MonoBehaviour
 
             //Dependiendo de la direccion la movera en un sentido u otro
             if (dir)
+            {
                 flecha.transform.Translate(new Vector2(velFlecha * Time.unscaledDeltaTime, 0));
+            }
             else
+            {
                 flecha.transform.Translate(new Vector2(-velFlecha * Time.unscaledDeltaTime, 0));
-
+            }
+                
             //Cuando se pulse la E...
             if (Input.GetKeyDown(KeyCode.E))
             {
