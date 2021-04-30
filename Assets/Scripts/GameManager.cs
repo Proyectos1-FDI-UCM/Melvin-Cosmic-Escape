@@ -131,7 +131,10 @@ public class GameManager : MonoBehaviour
         return melvin.transform.position;
     }
 
-
+    public void PasarNivel()
+    {
+        theUIManager.ChangeScene("LEVEL2 ALPHA");
+    }
   
 }
 

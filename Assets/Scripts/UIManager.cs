@@ -44,7 +44,6 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-
     public void Ganar()
     {
         PanelGanar.SetActive(true);
