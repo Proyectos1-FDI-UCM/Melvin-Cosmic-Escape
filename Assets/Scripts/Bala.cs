@@ -23,6 +23,8 @@ public class Bala : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(this.transform.position, melvin, VelocityScale * Time.deltaTime);
+
+        
     }
 
     void DestruyeBala()
