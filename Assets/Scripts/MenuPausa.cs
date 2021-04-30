@@ -36,6 +36,7 @@ public class MenuPausa : MonoBehaviour
                 AudioListener.volume = 0;
                 Cursor.visible = true;
                 Menu.SetActive(true);
+                Debug.Log("tus muertos");
             }
         }      
     }
