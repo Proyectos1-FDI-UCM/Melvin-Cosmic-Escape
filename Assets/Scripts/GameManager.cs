@@ -96,13 +96,15 @@ public class GameManager : MonoBehaviour
 
     public void Impactarbala()
     {
-        if(GetComponent<DestroyOnCollision>() == true)
+        vidaActual = vidaActual - 50;
+        theUIManager.takeDamage(vidaActual, vidaMaxima);
+        // theUIManager.Perder();
+        Debug.Log(vidaActual);
+
+        /* if(GetComponent<DestroyOnCollision>() == true)
         {
-            vidaActual = vidaActual-50;
-            theUIManager.takeDamage(vidaActual, vidaMaxima);
-            theUIManager.Perder();
-            Debug.Log(vidaActual);
-        }
+            
+        } */
     }
 
     public void CurarVida (int vidaCurada)

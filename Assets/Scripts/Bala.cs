@@ -27,6 +27,13 @@ public class Bala : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.GetComponentInParent<MelvinController>())
+        { 
+            gm.Impactarbala();
+        }
     }
 }
