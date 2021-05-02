@@ -14,8 +14,6 @@ public class PuertasBlindadas : MonoBehaviour
     {
         PuertaCerradaB = GetComponent<SpriteRenderer>();
         gm = GameManager.GetInstance();
-        print(poder);
-
     }
 
     private void OnCollisionStay2D(Collision2D collision)

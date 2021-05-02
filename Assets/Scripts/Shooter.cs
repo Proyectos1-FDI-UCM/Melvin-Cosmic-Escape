@@ -21,7 +21,7 @@ public class Shooter : MonoBehaviour
         campo.Origen(this.transform.position);
         campo.Direccion(this.transform.rotation.eulerAngles); // dirección del fov
 
-        if (campo.melvinEncontrado && !retardo)
+        if (!retardo && campo.melvinEncontrado)
         {
             Instantiate(bala, transform.position, transform.rotation);
             //Debug.Log("Bala disparada");
