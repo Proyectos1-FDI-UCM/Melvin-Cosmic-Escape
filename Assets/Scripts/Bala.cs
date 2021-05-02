@@ -23,13 +23,10 @@ public class Bala : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(this.transform.position, melvin, VelocityScale * Time.deltaTime);
-
+        if (new Vector2 (this.transform.position.x , this.transform.position.y) == melvin)
+        {
+            Destroy(this.gameObject);
+        }
         
     }
-
-    void DestruyeBala()
-    {
-        Destroy(this.gameObject);
-    }
-
 }
