@@ -22,10 +22,7 @@ public class PuertasBlindadas : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-
-            print("aaaaa");
-
-            if (gm.poderHabilidad == poderPuertas)
+            if (gm.poderHabilidad >= poderPuertas)
             {
                 PuertaCerradaB.sprite = PuertaAbiertaB;
                 GetComponent<Collider2D>().enabled = false;
