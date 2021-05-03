@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class MovCamara : MonoBehaviour
 {
-    public GameObject Camara;
+    public Camera Camara;
+    public GameObject canvas;
     public float VelocityScale;
+    public GameObject lugar;
     
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<PosesionController>() != null)
+        if(FindObjectOfType<MelvinController>())
         {
-            Camara.transform.Translate( Vector3.MoveTowards(Camara.transform.position, this.transform.position, VelocityScale * Time.deltaTime));
-        }
+            //Camara.transform.Translate( Vector3.MoveTowards(Camara.transform.position, lugar.transform.position, VelocityScale ));
+            Camara.transform.position= lugar.transform.position;  
+            Camara.transform.position = new Vector3(Camara.transform.position.x, Camara.transform.position.y, -10);
+            //Camara.transform.position= lugarCam.transform.position;            
+            canvas.transform.position = lugar.transform.position;
+           
+        }        
     }
 
     

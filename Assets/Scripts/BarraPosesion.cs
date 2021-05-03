@@ -30,6 +30,7 @@ public class BarraPosesion : MonoBehaviour
     private void OnEnable()
     {
         acabo = false;
+        
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class BarraPosesion : MonoBehaviour
         if (this.gameObject.activeSelf && !acabo)
         {
             //toma la posicion de la flecha multiplicada por 108 para que sea la posicion real (el canva esta reducido al 0.009)
-            flec = flecha.GetComponent<RectTransform>().position.x * 108;
+            flec = flecha.GetComponent<RectTransform>().localPosition.x;
 
             //Determinamos que direccion toma la flecha comparando la posicion con el grosor de la barra
             if (flec >= barWidth)
