@@ -22,6 +22,14 @@ public class MovCamara : MonoBehaviour
            
         }        
     }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (FindObjectOfType<MelvinController>())
+        {
+            this.GetComponent<Collider2D>().isTrigger = false;
+            
+        }
+       
+    }
 
-    
 }
