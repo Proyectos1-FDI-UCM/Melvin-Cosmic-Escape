@@ -7,7 +7,7 @@ public class EnemigoCientifico : MonoBehaviour
     public Sprite[] spritesCientificos = new Sprite[3];
 
     // Start is called before the first frame update
-    void Awake()
+    void OnEnable()
     {
         Invoke(nameof(CambioSprite), 0.01f);
     }

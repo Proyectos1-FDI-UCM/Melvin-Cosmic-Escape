@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1316151460226195175}
   - component: {fileID: 5293979155182359823}
   m_Layer: 8
-  m_Name: Cientifico_1
+  m_Name: Cientifico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

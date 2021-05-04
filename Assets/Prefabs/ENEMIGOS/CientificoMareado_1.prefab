@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1405894860960632613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.10345423, y: 0.10345423, z: 0.10345423}
+  m_LocalScale: {x: 0.044258706, y: 0.044258706, z: 0.044258706}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   numCientifico: 0
   spritesCientificos:
   - {fileID: 21300000, guid: 57fddf8b0312871408ab865a28c539ec, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: dca3ad78819673e4caaa2567812ca940, type: 3}
   - {fileID: 0}
 --- !u!50 &628970199804987074
 Rigidbody2D:

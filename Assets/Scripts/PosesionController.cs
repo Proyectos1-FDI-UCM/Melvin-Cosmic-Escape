@@ -38,14 +38,14 @@ public class PosesionController : MonoBehaviour
         if (Input.GetKey(KeyCode.T) && !poseyendo && !enProceso)
         {
             //Nos aseguramos de que solo interactue con un enemigo a la vez
-            if(other == null || other.layer != 8 || other.layer != 9 || other.layer != 10)
-            {
-                other = collision2D.gameObject;
-            }
+            
+            other = collision2D.gameObject;
 
-            if (other != null)
-                //Llamamos al Uimanager para que inicie el proceso
-                uiManager.BarraPosesion();
+            //Llamamos al Uimanager para que inicie el proceso
+            uiManager.BarraPosesion();
+            
+
+            // other == null || other.layer != 8 || other.layer != 9 || other.layer != 10
         }
     }
 
@@ -68,11 +68,12 @@ public class PosesionController : MonoBehaviour
                     melvin.SetActive(false);
                     cientifico.SetActive(true);
 
-                    //Pasa a estar en la misma posicion
-                    transform.position = other.gameObject.transform.position;
 
                     cientif = other.gameObject.GetComponent<EnemigoCientifico>().numCientifico;
-                    this.GetComponentInChildren<EnemigoCientifico>().numCientifico = cientif;
+                    this.GetComponentInChildren<EnemigoCientifico>(true).numCientifico = cientif;
+
+                    //Pasa a estar en la misma posicion
+                    transform.position = other.gameObject.transform.position;
 
                     //Destruimos el gameobject del enemigo que acabamos de poseer
                     Destroy(other.gameObject);
