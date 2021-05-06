@@ -35,17 +35,13 @@ public class PosesionController : MonoBehaviour
     void OnTriggerStay2D(Collider2D collision2D)
     {
         // Si se pulsa la tecla de poseer (Enter no veo como va) y no esta ya poseyendo, posee a lo que toque
-        if (Input.GetKey(KeyCode.T) && !poseyendo && !enProceso)
+        if (Input.GetKey(KeyCode.T) && !poseyendo && !enProceso && ( collision2D.gameObject.layer == 8 || collision2D.gameObject.layer == 9 || collision2D.gameObject.layer == 10))
         {
-            //Nos aseguramos de que solo interactue con un enemigo a la vez
-            
             other = collision2D.gameObject;
 
             //Llamamos al Uimanager para que inicie el proceso
             uiManager.BarraPosesion();
-            
 
-            // other == null || other.layer != 8 || other.layer != 9 || other.layer != 10
         }
     }
 
