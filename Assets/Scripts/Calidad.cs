@@ -10,7 +10,7 @@ public class Calidad : MonoBehaviour
     Resolution[] resoluciones;
     // Start is called before the first frame update
     void Start()
-    {
+    {       
         //guarda la calidad por defecto si se cambia , de esta manera al arrancar el juego se guardas los valores anteriormente dados
         calidad = PlayerPrefs.GetInt("NumerodeCalidad", 3);
         dropdownCalidad.value = calidad;
@@ -44,8 +44,9 @@ public class Calidad : MonoBehaviour
         //creo las opciones
         for (int i = 0; i < resoluciones.Length; i++)
         {
+            
             //creo la opcion
-            string opcion = resoluciones[i].width + "x" + resoluciones[i].height;
+            string opcion = resoluciones[i].width + "x" + resoluciones[i].height + "x" + resoluciones[i].refreshRate;
             //añado la opcion a la lista
             opciones.Add(opcion);
             //miro hasta encontrar la resolucion q hay por defecto o esta guardada de antes
