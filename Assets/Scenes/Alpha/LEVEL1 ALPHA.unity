@@ -216,27 +216,27 @@ PrefabInstance:
     - target: {fileID: 8065372079827410580, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.029989876
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065372079827410580, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065372079827410580, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065372079827410580, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9995502
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8065372079827410580, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -3.4370003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065372079827410582, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
@@ -291,12 +291,12 @@ PrefabInstance:
     - target: {fileID: 8065372080261103478, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.013141913
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065372080261103478, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.99991363
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8065372080261103478, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
@@ -306,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 8065372080261103478, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 1.506
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065372080261103478, guid: 3ca501feb6cd6754c92b19fe6bc6f25e,
         type: 3}

@@ -32,13 +32,13 @@ public class Ventilacion : MonoBehaviour
 
 
             if (rot > 45 && rot < 135)
-                other.gameObject.transform.parent.position = new Vector2(x + 1, y);
+                other.gameObject.transform.parent.position = new Vector2(x + 0.1f, y);
             else if (rot > 135 && rot < 225)
-                other.gameObject.transform.parent.position = new Vector2(x, y + 1);
+                other.gameObject.transform.parent.position = new Vector2(x, y + 1.7f);
             else if (rot > 225 && rot < 315)
-                other.gameObject.transform.parent.position = new Vector2(x - 1, y);
+                other.gameObject.transform.parent.position = new Vector2(x - 0.1f, y);
             else
-                other.gameObject.transform.parent.position = new Vector2(x, y - 1);
+                other.gameObject.transform.parent.position = new Vector2(x, y - 0.1f);
             //Que coja el padre del other y lo mueva a la posicion de la otra -1 en y
 
             enReposo = true;
