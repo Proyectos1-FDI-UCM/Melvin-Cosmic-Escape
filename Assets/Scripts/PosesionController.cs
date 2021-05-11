@@ -54,6 +54,7 @@ public class PosesionController : MonoBehaviour
         //Si le llega 1 ocurre la posesion normal
         if (opc == 1)
         {
+
             switch (other.layer)
             {
                 case 8:     //Este es el numero de capa del enemigo científico
@@ -123,6 +124,7 @@ public class PosesionController : MonoBehaviour
                     break;
                     //Se añade un case de este mismo estilo para cada enemigo
             }
+
         }
         //He modificado el CurarVida para que tambien acepte valores negativos y no pete
         else if (opc == 2)

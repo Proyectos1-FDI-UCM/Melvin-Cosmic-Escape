@@ -1907,6 +1907,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519502350971164636, guid: 1517a7f97e444504e81ee38e081982ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2312319023307869241, guid: 1517a7f97e444504e81ee38e081982ec,
         type: 3}
       propertyPath: posesionController
@@ -2033,6 +2038,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420030}
     - target: {fileID: 4508625514698245947, guid: 1517a7f97e444504e81ee38e081982ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250255379991033064, guid: 1517a7f97e444504e81ee38e081982ec,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2710,6 +2720,12 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 448498592}
+    - target: {fileID: 7417208934447278592, guid: 25ae58818f169884c9caf46c97127100,
+        type: 3}
+      propertyPath: nube
+      value: 
+      objectReference: {fileID: 6427173104283351320, guid: e1a203df40fede849b8172e4615c4496,
+        type: 3}
     - target: {fileID: 7417208934447278593, guid: 25ae58818f169884c9caf46c97127100,
         type: 3}
       propertyPath: gameManager

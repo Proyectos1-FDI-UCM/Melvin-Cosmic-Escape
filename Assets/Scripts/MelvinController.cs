@@ -9,6 +9,7 @@ public class MelvinController : MonoBehaviour
     Rigidbody2D rb;
     Vector2 movimiento;
     Quaternion rotacion;
+    public Animator animator;
 
     public PosesionController posesionController;
 
@@ -22,10 +23,12 @@ public class MelvinController : MonoBehaviour
         //Nueva condicion de si el juego esta en pausa
         if (!GameManager.GetInstance().pausa)
         {
-            //input del jugador
+            //input del jugadors
             float deltaX = Input.GetAxis("Horizontal");
             float deltaY = Input.GetAxis("Vertical");
             movimiento = new Vector2(deltaX, deltaY);
+
+            animator.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
 
             if (deltaX < 0)
                 transform.rotation = new Quaternion(0, -180, 0, 0);
@@ -39,13 +42,15 @@ public class MelvinController : MonoBehaviour
             if (Input.GetKey(KeyCode.T) && posesionController.poseyendo)
                 posesionController.Desposeer();
         }
-        else movimiento = new Vector2(0, 0); ;
+        else movimiento = new Vector2(0, 0);
 
     }
     void FixedUpdate()
     {
 
         rb.velocity = (movimiento * speed);
+
+
 
     }
 }

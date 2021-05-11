@@ -6,6 +6,8 @@ public class Ventilacion : MonoBehaviour
 {
     public float reposo;
 
+    public float dist;
+
     static bool enReposo;
 
     private float x, y, rot;
@@ -31,13 +33,13 @@ public class Ventilacion : MonoBehaviour
 
 
             if (rot > 45 && rot < 135)
-                other.gameObject.transform.parent.position = new Vector2(x + 1.2f, y+1);
+                other.gameObject.transform.parent.position = new Vector2(x + dist, y);
             else if (rot > 135 && rot < 225)
-                other.gameObject.transform.parent.position = new Vector2(x, y + 2.2f);
+                other.gameObject.transform.parent.position = new Vector2(x, y + dist);
             else if (rot > 225 && rot < 315)
-                other.gameObject.transform.parent.position = new Vector2(x - 1.2f, y+1);
+                other.gameObject.transform.parent.position = new Vector2(x - dist, y);
             else
-                other.gameObject.transform.parent.position = new Vector2(x, y - 0.2f);
+                other.gameObject.transform.parent.position = new Vector2(x, y - dist);
             //Que coja el padre del other y lo mueva a la posicion de la otra -1 en y
 
             enReposo = true;
