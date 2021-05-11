@@ -701,31 +701,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &293482792 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7417208933755509428, guid: 25ae58818f169884c9caf46c97127100,
+--- !u!95 &293482797 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 343669300662026850, guid: 25ae58818f169884c9caf46c97127100,
     type: 3}
   m_PrefabInstance: {fileID: 1489664165}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &293482797
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293482792}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 082e4ab6156b62042933c07ddeccb774, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &310090953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1259,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &697453591 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2312319024207988802, guid: 1517a7f97e444504e81ee38e081982ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 4062726788646185865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &702161783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9237,6 +9224,21 @@ PrefabInstance:
       propertyPath: posesionController
       value: 
       objectReference: {fileID: 1723922746}
+    - target: {fileID: 2312319023307869241, guid: 1517a7f97e444504e81ee38e081982ec,
+        type: 3}
+      propertyPath: zonaVerde
+      value: 
+      objectReference: {fileID: 697453591}
+    - target: {fileID: 2312319023307869241, guid: 1517a7f97e444504e81ee38e081982ec,
+        type: 3}
+      propertyPath: off
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312319023307869241, guid: 1517a7f97e444504e81ee38e081982ec,
+        type: 3}
+      propertyPath: velFlecha
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4062726788066271609, guid: 1517a7f97e444504e81ee38e081982ec,
         type: 3}
       propertyPath: m_AnchorMin.x

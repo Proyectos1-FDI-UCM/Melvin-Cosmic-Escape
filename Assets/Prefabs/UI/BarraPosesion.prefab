@@ -441,3 +441,5 @@ MonoBehaviour:
   velFlecha: 10
   posesionController: {fileID: 0}
   flecha: {fileID: 1762795984529189106}
+  zonaVerde: {fileID: 1762795984792917693}
+  off: 0.1

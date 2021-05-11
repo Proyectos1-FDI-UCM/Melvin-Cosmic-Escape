@@ -42,7 +42,12 @@ public class MelvinController : MonoBehaviour
             if (Input.GetKey(KeyCode.T) && posesionController.poseyendo)
                 posesionController.Desposeer();
         }
-        else movimiento = new Vector2(0, 0);
+        else
+        {
+            movimiento = new Vector2(0, 0);
+
+            animator.SetFloat("vel", 0);
+        }
 
     }
     void FixedUpdate()

@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 7417208933755509386}
   - component: {fileID: 7417208933755509384}
   - component: {fileID: 968930132654156330}
+  - component: {fileID: 343669300662026850}
   m_Layer: 0
   m_Name: melvinSprite
   m_TagString: Untagged
@@ -244,6 +245,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1140794267041222060, guid: 043851ef77a02e34fa8acc393ab63325,
     type: 3}
+--- !u!95 &343669300662026850
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417208933755509428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 082e4ab6156b62042933c07ddeccb774, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7417208934447278595
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  animator: {fileID: 343669300662026850}
   posesionController: {fileID: 7417208934447278592}
 --- !u!114 &7417208934447278592
 MonoBehaviour:
@@ -330,7 +351,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiManager: {fileID: 0}
   reposoTrasPoseer: 0.5
-  nube: {fileID: 0}
   melvin: {fileID: 7417208933755509428}
   cientifico: {fileID: 7417208934665735369}
   cientificoEne: {fileID: 1405894860960632613, guid: 4e7267751fab68e48ab78bac42048515,
