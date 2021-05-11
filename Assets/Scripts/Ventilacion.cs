@@ -10,8 +10,7 @@ public class Ventilacion : MonoBehaviour
 
     private float x, y, rot;
 
-    private Transform vent;
-
+    private Transform vent;    
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<MelvinGrowth>() != null && Input.GetKey(KeyCode.E) && !enReposo)
@@ -32,17 +31,16 @@ public class Ventilacion : MonoBehaviour
 
 
             if (rot > 45 && rot < 135)
-                other.gameObject.transform.parent.position = new Vector2(x + 0.1f, y);
+                other.gameObject.transform.parent.position = new Vector2(x + 1.2f, y+1);
             else if (rot > 135 && rot < 225)
-                other.gameObject.transform.parent.position = new Vector2(x, y + 1.7f);
+                other.gameObject.transform.parent.position = new Vector2(x, y + 2.2f);
             else if (rot > 225 && rot < 315)
-                other.gameObject.transform.parent.position = new Vector2(x - 0.1f, y);
+                other.gameObject.transform.parent.position = new Vector2(x - 1.2f, y+1);
             else
-                other.gameObject.transform.parent.position = new Vector2(x, y - 0.1f);
+                other.gameObject.transform.parent.position = new Vector2(x, y - 0.2f);
             //Que coja el padre del other y lo mueva a la posicion de la otra -1 en y
 
             enReposo = true;
-
             Invoke(nameof(CancelReposo), reposo);
 
         }
