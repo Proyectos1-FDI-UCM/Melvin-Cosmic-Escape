@@ -9253,11 +9253,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2077247485914649575, guid: 3d1be15dc7ed35247b65dd81f2283475,
         type: 3}
-      propertyPath: VelocityScale
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2077247485914649575, guid: 3d1be15dc7ed35247b65dd81f2283475,
-        type: 3}
       propertyPath: lugar
       value: 
       objectReference: {fileID: 726603595}
