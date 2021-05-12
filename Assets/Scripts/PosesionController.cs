@@ -128,6 +128,7 @@ public class PosesionController : MonoBehaviour
         }
         //He modificado el CurarVida para que tambien acepte valores negativos y no pete
         else if (opc == 2)
+            //Debug.LogError("AAAAAAAAAAAAAAAA");
             GameManager.GetInstance().CurarVida(-30);
     }
 

@@ -5,16 +5,14 @@ public class BarraPosesion : MonoBehaviour
     public int velFlecha;
     public PosesionController posesionController;
     public GameObject flecha;
-    public BoxCollider2D zonaVerde;
+    public RectTransform zonaVerde;
     public float off;
 
     //Posicion inicial de la flecha para volver a ella cuando acabe
     RectTransform ini;
 
-    Vector2 verdeIni;
-
     //Grosor de la barra para saber hasta donde debe llegar la flecha
-    float barWidth;
+    float barWidth, greenWidth;
 
     //posicion de la flecha en x en todo momento
     float flec;
@@ -26,9 +24,9 @@ public class BarraPosesion : MonoBehaviour
 
     private void Awake()
     {
-        verdeIni = new Vector2(zonaVerde.offset.x, zonaVerde.offset.y);
         ini = flecha.GetComponent<RectTransform>();
         barWidth = (GetComponent<RectTransform>().rect.width / 2) - 20;
+        greenWidth = (zonaVerde.rect.width / 2) + (off * 2);
         dir = 1;
     }
     private void OnEnable()
@@ -43,24 +41,22 @@ public class BarraPosesion : MonoBehaviour
         if (this.gameObject.activeSelf && !acabo)
         {
 
-            //toma la posicion de la flecha multiplicada por 108 para que sea la posicion real (el canva esta reducido al 0.009)
-            flec = ini.localPosition.x;
-
             //Determinamos que direccion toma la flecha comparando la posicion con el grosor de la barra
             if (flec >= barWidth)
             {
                 dir = -1;
-                zonaVerde.offset = verdeIni - (new Vector2(off * velFlecha, 0) * dir);
             }
             else if (flec <= -barWidth)
             {
                 dir = 1;
-                zonaVerde.offset = verdeIni - (new Vector2(off * velFlecha, 0) * dir);
             }
 
             //Dependiendo de la direccion la movera en un sentido u otro
             flecha.transform.Translate(new Vector2(velFlecha * Time.unscaledDeltaTime * dir, 0));
-                
+
+            //toma la posicion de la flecha multiplicada por 108 para que sea la posicion real (el canva esta reducido al 0.009)
+            flec = ini.localPosition.x;
+
             //Cuando se pulse la E...
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -84,7 +80,7 @@ public class BarraPosesion : MonoBehaviour
                 acabo = true;
 
                 //Dependiendo si la flecha esta tocando la zona verde...
-                if (flecha.GetComponent<Flecha>().tocado)
+                if (flec >= -greenWidth && flec <= greenWidth)
                     //Llama a posee con 1 (posee al enemigo)
                     posesionController.Posee(1);
                 else
