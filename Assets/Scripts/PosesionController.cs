@@ -4,6 +4,8 @@ public class PosesionController : MonoBehaviour
 {
     public UIManager uiManager;
 
+    public Animator anim;
+
     public float reposoTrasPoseer;
 
     int cientif;
@@ -54,6 +56,8 @@ public class PosesionController : MonoBehaviour
         //Si le llega 1 ocurre la posesion normal
         if (opc == 1)
         {
+
+            anim.SetTrigger("Posee");
 
             switch (other.layer)
             {

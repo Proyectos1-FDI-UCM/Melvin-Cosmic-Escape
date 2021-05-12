@@ -50,6 +50,9 @@ TagManager:
   - name: cientifico
     uniqueID: 3236554319
     locked: 0
+  - name: NubePosesion
+    uniqueID: 54865589
+    locked: 0
   - name: Interfaz
     uniqueID: 2626506243
     locked: 0
