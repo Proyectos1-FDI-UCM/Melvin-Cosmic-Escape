@@ -6,6 +6,7 @@ public class puertaNivel : MonoBehaviour
 {
 
     GameManager gm;
+    public string nivel;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class puertaNivel : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            gm.PasarNivel();
+            gm.PasarNivel(nivel);
         }
     }
 }

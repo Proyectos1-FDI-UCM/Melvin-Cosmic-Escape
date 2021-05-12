@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     //Array que contiene los niveles del juego, se controla desde el editor
     public string[] scenesInOrder;
 
+
     public bool pausa;
 
     //Variable que almacena la instancia del GameManager
@@ -133,9 +134,9 @@ public class GameManager : MonoBehaviour
         return melvin.transform.position;
     }
 
-    public void PasarNivel()
+    public void PasarNivel(string nivel)
     {
-        theUIManager.ChangeScene("LEVEL2 ALPHA");
+        theUIManager.ChangeScene(nivel);
     }
   
 }

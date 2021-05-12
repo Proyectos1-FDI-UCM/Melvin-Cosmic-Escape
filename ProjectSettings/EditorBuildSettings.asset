@@ -8,10 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alpha/MENU.unity
     guid: 507ae487da2d1da4988ba909bff2472a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Alpha/LEVEL1 ALPHA.unity
     guid: 20e2ea2b2c75cbb4d961d3e4fcd25232
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Alpha/LEVEL2 ALPHA.unity
     guid: 80842814f8c97b34faed0db4e8b9cca7
+  - enabled: 1
+    path: Assets/Scenes/JUEGO FINAL/NIVEL 1.unity
+    guid: 01d4d67183a978b42bfd3ff0e42dde74
+  - enabled: 1
+    path: Assets/Scenes/JUEGO FINAL/NIVEL 2.unity
+    guid: 876aeb0e782de624c99543270b53473d
   m_configObjects: {}
