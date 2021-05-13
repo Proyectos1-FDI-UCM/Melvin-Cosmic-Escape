@@ -2098,7 +2098,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 457900348}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 565186684}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f16b4e780c25d8341bc96e125d9f7cfc, type: 3}
@@ -2653,6 +2653,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &565186684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7417208934447278595, guid: 25ae58818f169884c9caf46c97127100,
+    type: 3}
+  m_PrefabInstance: {fileID: 457900348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &574358124
 GameObject:
   m_ObjectHideFlags: 0
@@ -22102,7 +22108,7 @@ PrefabInstance:
         type: 3}
       propertyPath: melvin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 565186684}
     - target: {fileID: 1140794267041222061, guid: 043851ef77a02e34fa8acc393ab63325,
         type: 3}
       propertyPath: m_Name
@@ -23564,6 +23570,11 @@ PrefabInstance:
       propertyPath: posesionController
       value: 
       objectReference: {fileID: 457900349}
+    - target: {fileID: 2312319023307869243, guid: 1517a7f97e444504e81ee38e081982ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4062726788051807492, guid: 1517a7f97e444504e81ee38e081982ec,
         type: 3}
       propertyPath: m_AnchoredPosition.x
