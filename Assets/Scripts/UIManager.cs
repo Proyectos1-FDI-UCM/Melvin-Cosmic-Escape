@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
         vidaActual = Mathf.Clamp(vidaActual, 0, vidaMax);
         if (vidaActual==0)
         {
-            Perder();
+            Perder();            
         }
         barraVida.fillAmount = vidaActual / vidaMax;
        numVida.text = vidaActual.ToString()+"%";
@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     //Método que cambia de escena
     public void ChangeScene(string sceneName)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }    
     public void Exit()

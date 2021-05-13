@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
             theUIManager.Perder();
             Debug.Log(vidaActual);
         }
+      
     }
 
     public void Impactarbala()
@@ -101,7 +102,7 @@ public class GameManager : MonoBehaviour
         theUIManager.takeDamage(vidaActual, vidaMaxima);
         // theUIManager.Perder();
         Debug.Log(vidaActual);
-
+       
         /* if(GetComponent<DestroyOnCollision>() == true)
         {
             
