@@ -63,8 +63,6 @@ public class PosesionController : MonoBehaviour
             {
                 case 8:     //Este es el numero de capa del enemigo científico
 
-                    enProceso = true;
-
                     // Pasa a ser el enemigo poseido
                     melvin.SetActive(false);
                     cientifico.SetActive(true);
@@ -87,8 +85,6 @@ public class PosesionController : MonoBehaviour
                     break;
                 case 9:     //Este es el numero de capa del enemigo ácido
 
-                    enProceso = true;
-
                     // Pasa a ser el enemigo poseido
                     melvin.SetActive(false);
                     acido.SetActive(true);
@@ -107,8 +103,6 @@ public class PosesionController : MonoBehaviour
                     break;
 
                 case 10:     //Este es el numero de capa del enemigo fuerte
-
-                    enProceso = true;
 
                     // Pasa a ser el enemigo poseido
                     melvin.SetActive(false);
