@@ -8,11 +8,12 @@ public class UIManager : MonoBehaviour
 {
     public float vidaMax, vidaActual;
     public Image barraVida;
-    public Text numVida; 
+    public Text numVida;
     GameManager gm;
     public GameObject PanelGanar;
     public GameObject PanelPerder;
     public BarraPosesion barraPosesion;
+    bool fin = false;
 
     void Start()
     {
@@ -47,6 +48,7 @@ public class UIManager : MonoBehaviour
     public void Ganar()
     {
         PanelGanar.SetActive(true);
+        fin = true;
         Invoke("Fuera", 3);
 
     }
@@ -61,7 +63,14 @@ public class UIManager : MonoBehaviour
         PanelGanar.SetActive(false);
         PanelPerder.SetActive(false);
 
-        ChangeScene("MENU");
+        string escena = SceneManager.GetActiveScene().name;
+
+        if (fin)
+        {
+            escena = "MENU";
+        }
+
+        ChangeScene(escena);
         Cursor.visible = true;
     }
 

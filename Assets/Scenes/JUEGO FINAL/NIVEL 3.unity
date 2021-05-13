@@ -1484,6 +1484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuertaNivel
       objectReference: {fileID: 0}
+    - target: {fileID: 8091732092297614606, guid: ddf9ff9bbd03b324fb203d4e266aff4f,
+        type: 3}
+      propertyPath: nivel
+      value: NIVEL 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddf9ff9bbd03b324fb203d4e266aff4f, type: 3}
 --- !u!4 &684323151 stripped
