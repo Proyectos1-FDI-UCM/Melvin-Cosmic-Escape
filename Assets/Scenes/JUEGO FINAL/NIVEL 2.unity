@@ -2030,16 +2030,6 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 1682353063}
-    - target: {fileID: 7417208934447278592, guid: 25ae58818f169884c9caf46c97127100,
-        type: 3}
-      propertyPath: acido
-      value: 
-      objectReference: {fileID: 2068120576}
-    - target: {fileID: 7417208934447278592, guid: 25ae58818f169884c9caf46c97127100,
-        type: 3}
-      propertyPath: fuerte
-      value: 
-      objectReference: {fileID: 726079764}
     - target: {fileID: 7417208934447278595, guid: 25ae58818f169884c9caf46c97127100,
         type: 3}
       propertyPath: m_Name
