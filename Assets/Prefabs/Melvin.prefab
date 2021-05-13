@@ -358,10 +358,10 @@ MonoBehaviour:
   cientifico: {fileID: 7417208934665735369}
   cientificoEne: {fileID: 1405894860960632613, guid: 4e7267751fab68e48ab78bac42048515,
     type: 3}
-  acido: {fileID: 6301678072471063390, guid: b49938b4ef4f6f84aa13853d83f9249a, type: 3}
+  acido: {fileID: 3607444309055649950, guid: 783f64a9446ee1b418ede788be4fec5e, type: 3}
   acidoEne: {fileID: 1175919111740079266, guid: dbc8394e58a0be041b95f05fa1f16eed,
     type: 3}
-  fuerte: {fileID: 1834914321204647105, guid: 8c4004547d58bed43a0d8ce6e44fde2a, type: 3}
+  fuerte: {fileID: 7417208934707175637}
   fuerteEne: {fileID: 1471436193357200606, guid: e3d1981b4665db74eb1b82a5a1840668,
     type: 3}
   poseyendo: 0
