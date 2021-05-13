@@ -9,7 +9,7 @@ public class MelvinController : MonoBehaviour
     Rigidbody2D rb;
     Vector2 movimiento;
     Quaternion rotacion;
-    public Animator animator;
+    public Animator melvin, acido;
 
     public PosesionController posesionController;
 
@@ -28,7 +28,8 @@ public class MelvinController : MonoBehaviour
             float deltaY = Input.GetAxis("Vertical");
             movimiento = new Vector2(deltaX, deltaY);
 
-            animator.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
+            melvin.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
+            acido.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
 
             if (deltaX < 0)
                 transform.rotation = new Quaternion(0, -180, 0, 0);
@@ -46,7 +47,8 @@ public class MelvinController : MonoBehaviour
         {
             movimiento = new Vector2(0, 0);
 
-            animator.SetFloat("vel", 0);
+            melvin.SetFloat("vel", 0);
+            acido.SetFloat("vel", 0);
         }
 
     }

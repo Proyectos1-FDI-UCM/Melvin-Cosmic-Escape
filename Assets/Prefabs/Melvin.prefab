@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7417208933381156342}
   - component: {fileID: 8278955378046140828}
   - component: {fileID: 2214251374855733010}
+  - component: {fileID: 540626325604827746}
   m_Layer: 0
   m_Name: acido
   m_TagString: Untagged
@@ -121,6 +122,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a43aa9407324a048ad3e9f3037e8427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &540626325604827746
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417208933381156339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9bc09090cc4e18349865259ff564512b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7417208933755509428
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  animator: {fileID: 343669300662026850}
+  melvin: {fileID: 343669300662026850}
+  acido: {fileID: 540626325604827746}
   posesionController: {fileID: 7417208934447278592}
 --- !u!114 &7417208934447278592
 MonoBehaviour:
@@ -358,7 +379,7 @@ MonoBehaviour:
   cientifico: {fileID: 7417208934665735369}
   cientificoEne: {fileID: 1405894860960632613, guid: 4e7267751fab68e48ab78bac42048515,
     type: 3}
-  acido: {fileID: 6301678072471063390, guid: b49938b4ef4f6f84aa13853d83f9249a, type: 3}
+  acido: {fileID: 7417208933381156339}
   acidoEne: {fileID: 1175919111740079266, guid: dbc8394e58a0be041b95f05fa1f16eed,
     type: 3}
   fuerte: {fileID: 1834914321204647105, guid: 8c4004547d58bed43a0d8ce6e44fde2a, type: 3}
