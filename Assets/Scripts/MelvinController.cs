@@ -9,13 +9,19 @@ public class MelvinController : MonoBehaviour
     Rigidbody2D rb;
     Vector2 movimiento;
     Quaternion rotacion;
-    public Animator melvin, acido;
+    public Animator melvin, acido, fuerte;
+
+    GameObject mel, aci, fue;
 
     public PosesionController posesionController;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        mel = this.transform.GetChild(0).gameObject;
+        aci = this.transform.GetChild(2).gameObject;
+        fue = this.transform.GetChild(3).gameObject;
     }
     // Update is called once per frame
     void Update()
@@ -28,8 +34,20 @@ public class MelvinController : MonoBehaviour
             float deltaY = Input.GetAxis("Vertical");
             movimiento = new Vector2(deltaX, deltaY);
 
-            melvin.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
-            acido.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
+            //Activamos las animaciones cuando correspondan
+            if (mel.activeSelf)
+            {
+                melvin.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
+            }
+            //faltaria el del cientifico
+            else if (aci.activeSelf)
+            {
+                acido.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
+            }
+            else if (fue.activeSelf)
+            {
+                fuerte.SetFloat("vel", Mathf.Abs(deltaX) + Mathf.Abs(deltaY));
+            }
 
             if (deltaX < 0)
                 transform.rotation = new Quaternion(0, -180, 0, 0);
@@ -47,8 +65,19 @@ public class MelvinController : MonoBehaviour
         {
             movimiento = new Vector2(0, 0);
 
-            melvin.SetFloat("vel", 0);
-            acido.SetFloat("vel", 0);
+            if (mel.activeSelf)
+            {
+                melvin.SetFloat("vel", 0);
+            }
+            //faltaria el del cientifico
+            else if (aci.activeSelf)
+            {
+                acido.SetFloat("vel", 0);
+            }
+            else if (fue.activeSelf)
+            {
+                fuerte.SetFloat("vel", 0);
+            }
         }
 
     }

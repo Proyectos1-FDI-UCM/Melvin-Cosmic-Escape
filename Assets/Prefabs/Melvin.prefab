@@ -359,6 +359,7 @@ MonoBehaviour:
   speed: 5
   melvin: {fileID: 343669300662026850}
   acido: {fileID: 540626325604827746}
+  fuerte: {fileID: 3914551352094708601}
   posesionController: {fileID: 7417208934447278592}
 --- !u!114 &7417208934447278592
 MonoBehaviour:
@@ -382,7 +383,7 @@ MonoBehaviour:
   acido: {fileID: 7417208933381156339}
   acidoEne: {fileID: 1175919111740079266, guid: dbc8394e58a0be041b95f05fa1f16eed,
     type: 3}
-  fuerte: {fileID: 1834914321204647105, guid: 8c4004547d58bed43a0d8ce6e44fde2a, type: 3}
+  fuerte: {fileID: 7417208934707175637}
   fuerteEne: {fileID: 1471436193357200606, guid: e3d1981b4665db74eb1b82a5a1840668,
     type: 3}
   poseyendo: 0
@@ -593,6 +594,7 @@ GameObject:
   - component: {fileID: 7417208934707176232}
   - component: {fileID: 7184413675822080034}
   - component: {fileID: 4539716286783360718}
+  - component: {fileID: 3914551352094708601}
   m_Layer: 0
   m_Name: fuerte
   m_TagString: Untagged
@@ -609,7 +611,7 @@ Transform:
   m_GameObject: {fileID: 7417208934707175637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.104988694, y: 0.104988694, z: 0.13554737}
+  m_LocalScale: {x: 0.09, y: 0.09, z: 1}
   m_Children: []
   m_Father: {fileID: 7417208934447278596}
   m_RootOrder: 3
@@ -702,3 +704,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1417430f10da5b45b7b6e7093480904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3914551352094708601
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417208934707175637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4266ee96a8d16e640bdcca383cdf8ffe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

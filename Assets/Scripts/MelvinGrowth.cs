@@ -16,7 +16,7 @@ public class MelvinGrowth : MonoBehaviour
     public void GrowMelvin()
     {
         // Declarar un vector con el nuevo tamaño
-        Vector2 newSize = new Vector2(gameObject.transform.localScale.x + 0.1f, gameObject.transform.localScale.y + 0.1f);
+        Vector2 newSize = new Vector2(gameObject.transform.localScale.x + 0.05f, gameObject.transform.localScale.y + 0.05f);
         // Cambiar el tamaño de Melvin
         gameObject.transform.localScale = newSize;
     }
