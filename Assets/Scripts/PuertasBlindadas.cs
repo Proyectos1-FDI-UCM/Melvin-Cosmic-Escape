@@ -20,7 +20,7 @@ public class PuertasBlindadas : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            if (gm.poderHabilidad >= poderPuertas)
+            if ((gm.poderHabilidad >= poderPuertas) && (collision.collider.gameObject.GetComponentInChildren<MelvinGrowth>()))
             {
                 PuertaCerradaB.sprite = PuertaAbiertaB;
                 GetComponent<Collider2D>().enabled = false;

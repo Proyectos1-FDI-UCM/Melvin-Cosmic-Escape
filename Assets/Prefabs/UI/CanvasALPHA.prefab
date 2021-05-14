@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 4062726788533690411}
   - component: {fileID: 4062726788533690408}
   - component: {fileID: 4062726788533690409}
+  - component: {fileID: 4180956234216728936}
   m_Layer: 5
   m_Name: CanvasALPHA
   m_TagString: Untagged
@@ -393,6 +394,19 @@ MonoBehaviour:
   PanelGanar: {fileID: 8308393860103077541}
   PanelPerder: {fileID: 4508625514698245947}
   barraPosesion: {fileID: 2312319023307869241}
+--- !u!114 &4180956234216728936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4062726788533690390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0091dd4f268d7a4e9481e3941b15075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  melvin: {fileID: 0}
 --- !u!1 &4062726788787404784
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,8 +29,7 @@ public class CampoDeVision : MonoBehaviour
         melvinEncontrado = false;
         if (renderer.isVisible)
         {
-            Debug.Log("Um campo de visión está en cámara");
-
+            Debug.Log("Un campo de visión está en cámara");
 
             int rayosVision = 20; // Cuántos rayos de visión se castean
             float anguloActual = anguloInicial; // Irá aumentando en cada interacción

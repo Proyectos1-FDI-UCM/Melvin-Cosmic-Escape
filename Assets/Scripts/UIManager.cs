@@ -57,6 +57,8 @@ public class UIManager : MonoBehaviour
     {
         PanelPerder.SetActive(true);
         Invoke("Fuera", 3);
+
+        gm.Pausa(true);
     }
 
     void Fuera()

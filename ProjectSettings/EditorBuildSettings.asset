@@ -18,9 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/JUEGO FINAL/NIVEL 1.unity
     guid: 01d4d67183a978b42bfd3ff0e42dde74
   - enabled: 1
-    path: Assets/Scenes/JUEGO FINAL/NIVEL 2.unity
+    path: Assets/Scenes/JUEGO FINAL/NIVEL 3.unity
     guid: 876aeb0e782de624c99543270b53473d
   - enabled: 1
-    path: Assets/Scenes/JUEGO FINAL/NIVEL 3.unity
+    path: Assets/Scenes/JUEGO FINAL/NIVEL 2.unity
     guid: 53e705dd81576294aa59981ee1dbfd6b
   m_configObjects: {}
