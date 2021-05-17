@@ -15,6 +15,9 @@ public class UIManager : MonoBehaviour
     public BarraPosesion barraPosesion;
     bool fin = false;
 
+    public AudioSource sonidoPerderVida;
+    AudioSource clonSonidoPerderVida;
+
     void Start()
     {
         gm = GameManager.GetInstance();
@@ -23,7 +26,7 @@ public class UIManager : MonoBehaviour
         PanelPerder.SetActive(false);
     }
     //Metodo con el cual actualizamos la barra de vida junto a su porcentaje
-    public void takeDamage(float vidaActual, float vidaMax)
+    public void takeDamage(float vidaActual, float vidaMax, bool pierdeVida)
     {
         //Para evitar que la vida Actual se pueda sobrePasar la vidaMaxima *Para una vez se creen las curas*
         vidaActual = Mathf.Clamp(vidaActual, 0, vidaMax);
@@ -32,7 +35,14 @@ public class UIManager : MonoBehaviour
             Perder();            
         }
         barraVida.fillAmount = vidaActual / vidaMax;
-       numVida.text = vidaActual.ToString()+"%";
+        numVida.text = vidaActual.ToString()+"%";
+
+        if (pierdeVida)
+        {
+            clonSonidoPerderVida = Instantiate(sonidoPerderVida);
+            clonSonidoPerderVida.Play();
+            Invoke("DestruyeSonido", 1f);
+        }
     }
 
     //Método que cambia de escena
@@ -84,6 +94,12 @@ public class UIManager : MonoBehaviour
 
         //Activa la barra de posesion que a su vez iniciara todo su tinglado
         barraPosesion.gameObject.SetActive(true);
+    }
+
+    // Evita que haya GO innecesarios en la escena
+    private void DestruyeSonido()
+    {
+        Destroy(clonSonidoPerderVida);
     }
 
 }

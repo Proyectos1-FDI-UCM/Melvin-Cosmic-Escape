@@ -5,6 +5,9 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     public float VelocityScale;
+    public AudioSource sonidoDisparo;
+    AudioSource clonSonidoDisparo;
+
     Rigidbody2D bulletfisica;
 
     GameManager gm;
@@ -16,8 +19,21 @@ public class Bala : MonoBehaviour
         gm = GameManager.GetInstance();
         melvin = gm.PosicionDisparo();
 
+        Instantiate(sonidoDisparo);
+
+        clonSonidoDisparo = Instantiate(sonidoDisparo);
+        clonSonidoDisparo.Play();
+        Invoke("DestruyeSonido", 2f);
+
         // bulletfisica = GetComponent<Rigidbody2D>();
     }
+
+    // Evita que haya GO innecesarios en la escena
+    private void DestruyeSonido()
+    {
+        Destroy(clonSonidoDisparo);
+    }
+
 
     // Se establece el desplazamiento de la bala.
     private void FixedUpdate()

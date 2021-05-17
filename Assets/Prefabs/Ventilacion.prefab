@@ -50,6 +50,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c60869e2bfc756244bfa8039d7dd1d07, type: 3}
   - {fileID: 0}
   - {fileID: 0}
+  sonidoVentilacion: {fileID: 0}
 --- !u!1 &8065372079827410571
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2940d2afc2924c4fa12b2ff98c3e9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sonidoVentilacion: {fileID: 1293928082739154925, guid: d438378a1b429234aba94dd9f8a29d25,
+    type: 3}
   reposo: 1
   dist: 1
 --- !u!1 &8065372080261103477
@@ -294,5 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2940d2afc2924c4fa12b2ff98c3e9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sonidoVentilacion: {fileID: 1293928082739154925, guid: d438378a1b429234aba94dd9f8a29d25,
+    type: 3}
   reposo: 1
   dist: 1

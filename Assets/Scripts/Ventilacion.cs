@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Ventilacion : MonoBehaviour
 {
+    public AudioSource sonidoVentilacion;
+    AudioSource clonSonidoVentilacion;
+
     public float reposo;
 
     public float dist;
@@ -45,11 +48,21 @@ public class Ventilacion : MonoBehaviour
             enReposo = true;
             Invoke(nameof(CancelReposo), reposo);
 
+            clonSonidoVentilacion = Instantiate(sonidoVentilacion);
+            clonSonidoVentilacion.Play();
+            Invoke("DestruyeSonido", 2f);
+
         }
     }
 
     void CancelReposo()
     {
         enReposo = false;
+    }
+
+    // Evita que haya GO innecesarios en la escena
+    private void DestruyeSonido()
+    {
+        Destroy(clonSonidoVentilacion);
     }
 }

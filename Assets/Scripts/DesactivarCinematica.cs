@@ -22,7 +22,7 @@ public class DesactivarCinematica : MonoBehaviour
 
     void Desactivar()
     {
-        Debug.Log("Desactivar llamado.");
+        //Debug.Log("Desactivar llamado.");
         Destroy(this.gameObject);
     }
 }

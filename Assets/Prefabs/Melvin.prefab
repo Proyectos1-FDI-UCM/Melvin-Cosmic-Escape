@@ -386,6 +386,8 @@ MonoBehaviour:
   fuerte: {fileID: 7417208934707175637}
   fuerteEne: {fileID: 1471436193357200606, guid: e3d1981b4665db74eb1b82a5a1840668,
     type: 3}
+  sonidoPosesion: {fileID: 1293928082739154925, guid: c76766d419a9faa4db5cfa32a70f804b,
+    type: 3}
   poseyendo: 0
 --- !u!95 &6263565995468151061
 Animator:

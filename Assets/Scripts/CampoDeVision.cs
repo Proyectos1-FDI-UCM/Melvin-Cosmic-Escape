@@ -29,7 +29,7 @@ public class CampoDeVision : MonoBehaviour
         melvinEncontrado = false;
         if (renderer.isVisible)
         {
-            Debug.Log("Un campo de visión está en cámara");
+            // Debug.Log("Un campo de visión está en cámara");
 
             int rayosVision = 20; // Cuántos rayos de visión se castean
             float anguloActual = anguloInicial; // Irá aumentando en cada interacción
@@ -65,7 +65,7 @@ public class CampoDeVision : MonoBehaviour
                     if (raycast.collider.GetComponentInParent<MelvinController>() && !raycast.collider.GetComponent<EnemigoCientifico>())
                     {
                         melvinEncontrado = true;
-                        Debug.Log("Melvin encontrado!");
+                        //Debug.Log("Melvin encontrado!");
                     }
                 }
 
@@ -89,8 +89,8 @@ public class CampoDeVision : MonoBehaviour
             mesh.uv = uv;
             mesh.triangles = triangulos;
 
-            if (melvinEncontrado)
-                Debug.Log("Melvin encontrado es: " + melvinEncontrado);
+            /* if (melvinEncontrado)
+                Debug.Log("Melvin encontrado es: " + melvinEncontrado); */
         }
 
     }   

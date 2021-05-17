@@ -158,3 +158,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VelocityScale: 4
+  sonidoDisparo: {fileID: 1293928082739154925, guid: 39550a2bfa91d074f8b62af7c0499156,
+    type: 3}

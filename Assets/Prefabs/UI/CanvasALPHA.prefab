@@ -394,6 +394,8 @@ MonoBehaviour:
   PanelGanar: {fileID: 8308393860103077541}
   PanelPerder: {fileID: 4508625514698245947}
   barraPosesion: {fileID: 2312319023307869241}
+  sonidoPerderVida: {fileID: 1293928082739154925, guid: c8fb23762759ef042bfc4b3319f14460,
+    type: 3}
 --- !u!114 &4180956234216728936
 MonoBehaviour:
   m_ObjectHideFlags: 0

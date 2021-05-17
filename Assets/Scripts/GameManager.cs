@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     public void SetUIManager(UIManager uim)
     {
         theUIManager = uim;
-        uim.takeDamage(vidaActual, vidaMaxima);
+        uim.takeDamage(vidaActual, vidaMaxima, false);
     }
 
     // Asigna el GO correspondiente a Melvin
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         if (!pausa)
         {
             vidaActual = 0;
-            theUIManager.takeDamage(vidaActual, vidaMaxima);
+            theUIManager.takeDamage(vidaActual, vidaMaxima, false);
             theUIManager.Perder();
             Debug.Log(vidaActual);
         }
@@ -99,14 +99,7 @@ public class GameManager : MonoBehaviour
     public void Impactarbala()
     {
         vidaActual = vidaActual - 50;
-        theUIManager.takeDamage(vidaActual, vidaMaxima);
-        // theUIManager.Perder();
-        Debug.Log(vidaActual);
-       
-        /* if(GetComponent<DestroyOnCollision>() == true)
-        {
-            
-        } */
+        theUIManager.takeDamage(vidaActual, vidaMaxima, true);
     }
 
     public void CurarVida (int vidaCurada)
@@ -116,6 +109,12 @@ public class GameManager : MonoBehaviour
             vidaActual = vidaActual + vidaCurada;
             SetUIManager(theUIManager);
         }
+
+        if (vidaCurada < 0)
+        {
+            theUIManager.takeDamage(vidaActual, vidaMaxima, true);
+        }
+
     }
 
     public void GanarPartida ()

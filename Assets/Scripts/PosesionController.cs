@@ -28,6 +28,10 @@ public class PosesionController : MonoBehaviour
     public bool poseyendo;
     bool enProceso;
 
+
+    AudioSource clonSonidoPosesion;
+    public AudioSource sonidoPosesion;
+
     private void Start()
     {
         poseyendo = false;
@@ -123,11 +127,16 @@ public class PosesionController : MonoBehaviour
                     //Se añade un case de este mismo estilo para cada enemigo
             }
 
+            clonSonidoPosesion = Instantiate(sonidoPosesion);
+            clonSonidoPosesion.Play();
+            Invoke("DestruyeSonido", 2f);
+
         }
         //He modificado el CurarVida para que tambien acepte valores negativos y no pete
         else if (opc == 2)
-            //Debug.LogError("AAAAAAAAAAAAAAAA");
+        {
             GameManager.GetInstance().CurarVida(-30);
+        }
     }
 
     void ConfirmarPosesion()
@@ -165,5 +174,11 @@ public class PosesionController : MonoBehaviour
 
         melvin.SetActive(true);
         Invoke("ConfirmarDesposesion", reposoTrasPoseer);
+    }
+
+    // Evita que haya GO innecesarios en la escena
+    private void DestruyeSonido()
+    {
+        Destroy(clonSonidoPosesion);
     }
 }
