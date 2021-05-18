@@ -17,6 +17,11 @@ public class UIManager : MonoBehaviour
 
     public AudioSource sonidoPerderVida;
     AudioSource clonSonidoPerderVida;
+    public AudioSource sonidoPerder;
+    AudioSource clonSonidoPerder;
+    public AudioSource sonidoGanarVida;
+    AudioSource clonSonidoGanarVida;
+
 
     void Start()
     {
@@ -26,22 +31,32 @@ public class UIManager : MonoBehaviour
         PanelPerder.SetActive(false);
     }
     //Metodo con el cual actualizamos la barra de vida junto a su porcentaje
-    public void takeDamage(float vidaActual, float vidaMax, bool pierdeVida)
+    public void takeDamage(float vidaActual, float vidaMax, bool pierdeVida, bool ganaVida)
     {
         //Para evitar que la vida Actual se pueda sobrePasar la vidaMaxima *Para una vez se creen las curas*
         vidaActual = Mathf.Clamp(vidaActual, 0, vidaMax);
         if (vidaActual==0)
         {
-            Perder();            
+            Perder();
+            clonSonidoPerder = (AudioSource)AudioSource.Instantiate(sonidoPerder);
+            clonSonidoPerder.Play();
+            Destroy(clonSonidoPerder, 3f);
         }
         barraVida.fillAmount = vidaActual / vidaMax;
         numVida.text = vidaActual.ToString()+"%";
 
+        // Condiciones para la reproducción de sfx
         if (pierdeVida)
         {
-            clonSonidoPerderVida = Instantiate(sonidoPerderVida);
+            clonSonidoPerderVida = (AudioSource)AudioSource.Instantiate(sonidoPerderVida);
             clonSonidoPerderVida.Play();
-            Invoke("DestruyeSonido", 1f);
+            Destroy(clonSonidoPerderVida, 1f);
+        }
+        else if (ganaVida)
+        {
+            clonSonidoGanarVida = (AudioSource)AudioSource.Instantiate(sonidoGanarVida);
+            clonSonidoGanarVida.Play();
+            Destroy(clonSonidoGanarVida, 2f);
         }
     }
 
@@ -67,6 +82,8 @@ public class UIManager : MonoBehaviour
     {
         PanelPerder.SetActive(true);
         Invoke("Fuera", 3);
+
+
 
         gm.Pausa(true);
     }
@@ -94,12 +111,6 @@ public class UIManager : MonoBehaviour
 
         //Activa la barra de posesion que a su vez iniciara todo su tinglado
         barraPosesion.gameObject.SetActive(true);
-    }
-
-    // Evita que haya GO innecesarios en la escena
-    private void DestruyeSonido()
-    {
-        Destroy(clonSonidoPerderVida);
     }
 
 }

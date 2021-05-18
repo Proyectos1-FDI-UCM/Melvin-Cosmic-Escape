@@ -50,7 +50,7 @@ public class Ventilacion : MonoBehaviour
 
             clonSonidoVentilacion = Instantiate(sonidoVentilacion);
             clonSonidoVentilacion.Play();
-            Invoke("DestruyeSonido", 2f);
+            Destroy(clonSonidoVentilacion, 2f);
 
         }
     }
@@ -58,11 +58,5 @@ public class Ventilacion : MonoBehaviour
     void CancelReposo()
     {
         enReposo = false;
-    }
-
-    // Evita que haya GO innecesarios en la escena
-    private void DestruyeSonido()
-    {
-        Destroy(clonSonidoVentilacion);
     }
 }

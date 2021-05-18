@@ -129,8 +129,7 @@ public class PosesionController : MonoBehaviour
 
             clonSonidoPosesion = Instantiate(sonidoPosesion);
             clonSonidoPosesion.Play();
-            Invoke("DestruyeSonido", 2f);
-
+            Destroy(clonSonidoPosesion, 1f);
         }
         //He modificado el CurarVida para que tambien acepte valores negativos y no pete
         else if (opc == 2)
@@ -176,9 +175,4 @@ public class PosesionController : MonoBehaviour
         Invoke("ConfirmarDesposesion", reposoTrasPoseer);
     }
 
-    // Evita que haya GO innecesarios en la escena
-    private void DestruyeSonido()
-    {
-        Destroy(clonSonidoPosesion);
-    }
 }

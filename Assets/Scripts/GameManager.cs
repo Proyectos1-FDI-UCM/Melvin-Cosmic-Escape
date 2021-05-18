@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     public void SetUIManager(UIManager uim)
     {
         theUIManager = uim;
-        uim.takeDamage(vidaActual, vidaMaxima, false);
+        uim.takeDamage(vidaActual, vidaMaxima, false, false);
     }
 
     // Asigna el GO correspondiente a Melvin
@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
             melvin.GetComponentInChildren<MelvinGrowth>().GrowMelvin();
             //Invoco UIManager para actualizar la vida max
             SetUIManager(theUIManager);
+            theUIManager.takeDamage(vidaActual, vidaMaxima, false, true);
         }
     }
 
@@ -89,7 +90,7 @@ public class GameManager : MonoBehaviour
         if (!pausa)
         {
             vidaActual = 0;
-            theUIManager.takeDamage(vidaActual, vidaMaxima, false);
+            theUIManager.takeDamage(vidaActual, vidaMaxima, false, false);
             theUIManager.Perder();
             Debug.Log(vidaActual);
         }
@@ -99,20 +100,23 @@ public class GameManager : MonoBehaviour
     public void Impactarbala()
     {
         vidaActual = vidaActual - 50;
-        theUIManager.takeDamage(vidaActual, vidaMaxima, true);
+        theUIManager.takeDamage(vidaActual, vidaMaxima, true, false);
     }
 
     public void CurarVida (int vidaCurada)
     {
-        if ((vidaActual < vidaMaxima && vidaCurada > 0) || (vidaActual > vidaCurada && vidaCurada < 0))
+        Debug.Log(vidaCurada);
+        if ((vidaCurada > 0) && ((vidaActual < vidaMaxima && vidaCurada > 0) || (vidaActual > vidaCurada && vidaCurada < 0)))
         {
             vidaActual = vidaActual + vidaCurada;
             SetUIManager(theUIManager);
-        }
-
-        if (vidaCurada < 0)
+            theUIManager.takeDamage(vidaActual, vidaMaxima, false, true);
+            Debug.Log("vida curada");
+        }else if ((vidaCurada < 0) && (vidaActual < vidaMaxima && vidaCurada > 0) || (vidaActual > vidaCurada && vidaCurada < 0))
         {
-            theUIManager.takeDamage(vidaActual, vidaMaxima, true);
+            vidaActual = vidaActual + vidaCurada;
+            theUIManager.takeDamage(vidaActual, vidaMaxima, true, false);
+            Debug.Log("vida perdida");
         }
 
     }

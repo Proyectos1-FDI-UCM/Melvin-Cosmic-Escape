@@ -147,3 +147,5 @@ MonoBehaviour:
   poderPuertas: 10
   PuertaAbiertaB: {fileID: -6568737549209378874, guid: f185cec5023e3a34e9a5ce643441b161,
     type: 3}
+  sonidoAbrirPuerta: {fileID: 1293928082739154925, guid: 23e481ace99e4ea4dab394de4db6066d,
+    type: 3}

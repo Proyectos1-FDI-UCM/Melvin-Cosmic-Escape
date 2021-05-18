@@ -8,9 +8,6 @@ public class VentController : MonoBehaviour
 
     public Sprite[] spritesVent = new Sprite[3];
 
-    public AudioSource sonidoVentilacion;
-    AudioSource clonSonidoVentilacion;
-
     void Awake()
     {
         this.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = spritesVent[numVent - 1]; //Importante colocar los sprites en orden

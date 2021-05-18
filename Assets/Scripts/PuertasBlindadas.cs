@@ -10,6 +10,9 @@ public class PuertasBlindadas : MonoBehaviour
     int poder;
     GameManager gm;
 
+    public AudioSource sonidoAbrirPuerta;
+    AudioSource clonSonidoAbrirPuerta;
+
     void Start()
     {
         PuertaCerradaB = GetComponent<SpriteRenderer>();
@@ -24,6 +27,9 @@ public class PuertasBlindadas : MonoBehaviour
             {
                 PuertaCerradaB.sprite = PuertaAbiertaB;
                 GetComponent<Collider2D>().enabled = false;
+                clonSonidoAbrirPuerta = (AudioSource)AudioSource.Instantiate(sonidoAbrirPuerta);
+                clonSonidoAbrirPuerta.Play();
+                Destroy(clonSonidoAbrirPuerta, 1f);
             }
         }
     }

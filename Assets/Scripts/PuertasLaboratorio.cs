@@ -9,6 +9,9 @@ public class PuertasLaboratorio : MonoBehaviour
     SpriteRenderer PuertaCerrada;
     int enemigo;
 
+    public AudioSource sonidoAbrirPuertaLab;
+    AudioSource clonSonidoAbrirPuertaLab;
+
     void Start()
     {
         PuertaCerrada = GetComponent<SpriteRenderer>();
@@ -24,6 +27,9 @@ public class PuertasLaboratorio : MonoBehaviour
             {
                 PuertaCerrada.sprite = PuertaAbierta;
                 GetComponent<Collider2D>().enabled = false;
+                clonSonidoAbrirPuertaLab = (AudioSource)AudioSource.Instantiate(sonidoAbrirPuertaLab);
+                clonSonidoAbrirPuertaLab.Play();
+                Destroy(clonSonidoAbrirPuertaLab, 1f);
             }
         }
     }

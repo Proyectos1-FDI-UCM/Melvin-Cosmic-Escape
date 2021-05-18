@@ -146,3 +146,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numpuertas: 1
   PuertaAbierta: {fileID: 21300000, guid: 7c3a347e2c64e0c41a3a6a222fcacc6b, type: 3}
+  sonidoAbrirPuertaLab: {fileID: 1293928082739154925, guid: 5fc56bd5243984446bc25f6036399fd1,
+    type: 3}

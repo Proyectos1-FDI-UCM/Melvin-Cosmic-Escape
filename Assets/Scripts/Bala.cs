@@ -19,21 +19,12 @@ public class Bala : MonoBehaviour
         gm = GameManager.GetInstance();
         melvin = gm.PosicionDisparo();
 
-        Instantiate(sonidoDisparo);
-
         clonSonidoDisparo = Instantiate(sonidoDisparo);
         clonSonidoDisparo.Play();
-        Invoke("DestruyeSonido", 2f);
+        Destroy(clonSonidoDisparo, 1f);
 
         // bulletfisica = GetComponent<Rigidbody2D>();
     }
-
-    // Evita que haya GO innecesarios en la escena
-    private void DestruyeSonido()
-    {
-        Destroy(clonSonidoDisparo);
-    }
-
 
     // Se establece el desplazamiento de la bala.
     private void FixedUpdate()

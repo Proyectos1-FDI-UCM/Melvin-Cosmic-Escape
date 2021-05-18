@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nivel: 
+  sonidoFinNivel: {fileID: 1293928082739154925, guid: f8ebfd04c8c148448bbb50f154bf6039,
+    type: 3}
 --- !u!61 &8091732092297614607
 BoxCollider2D:
   m_ObjectHideFlags: 0
