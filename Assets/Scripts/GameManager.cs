@@ -105,16 +105,20 @@ public class GameManager : MonoBehaviour
 
     public void CurarVida (int vidaCurada)
     {
+        Debug.Log(vidaCurada);
         if ((vidaCurada > 0) && ((vidaActual < vidaMaxima && vidaCurada > 0) || (vidaActual > vidaCurada && vidaCurada < 0)))
         {
             vidaActual = vidaActual + vidaCurada;
             SetUIManager(theUIManager);
             theUIManager.takeDamage(vidaActual, vidaMaxima, false, true);
+            Debug.Log("vida curada");
         }else if ((vidaCurada < 0) && (vidaActual < vidaMaxima && vidaCurada > 0) || (vidaActual > vidaCurada && vidaCurada < 0))
         {
             vidaActual = vidaActual + vidaCurada;
             theUIManager.takeDamage(vidaActual, vidaMaxima, true, false);
+            Debug.Log("vida perdida");
         }
+
     }
 
     public void GanarPartida ()
