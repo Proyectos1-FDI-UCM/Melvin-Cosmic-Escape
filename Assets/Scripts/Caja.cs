@@ -12,12 +12,14 @@ public class Caja : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && collision.gameObject.GetComponentInChildren<EnemigoFuerte>())
         {
-
+            // Animación
             caja.SetTrigger("Destruye");
 
+            // Destrucción del objeto
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-
             Destroy(this.gameObject, 0.09f);
+
+            // Efectos de sonido
             clonSonidoCaja = (AudioSource)AudioSource.Instantiate(sonidoCaja);
             clonSonidoCaja.Play();
             Destroy(clonSonidoCaja, 3f);

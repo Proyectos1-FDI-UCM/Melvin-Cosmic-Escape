@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class ContenedorVida : MonoBehaviour
 {
-    int vidaCurada = 5;
+    public int vidaCurada = 5;
     bool usado = false;
     public Sprite contlleno;
     SpriteRenderer contvacio;
     GameManager gm;
-
 
     private void Start()
     {

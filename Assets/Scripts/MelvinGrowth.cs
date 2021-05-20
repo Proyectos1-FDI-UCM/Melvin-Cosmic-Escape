@@ -9,8 +9,8 @@ public class MelvinGrowth : MonoBehaviour
 
     private void Awake()
     {
-            // Llamo al GM para declarar este gameobject como el Melvin actual
-            gameManager.MelvinCreated(this.gameObject);
+        // Llamo al GM para declarar este gameobject como el Melvin actual
+        gameManager.MelvinCreated(this.gameObject);
     }
 
     public void GrowMelvin()

@@ -36,18 +36,24 @@ public class Ventilacion : MonoBehaviour
 
 
             if (rot > 45 && rot < 135)
+            {
                 other.gameObject.transform.parent.position = new Vector2(x + dist, y);
-            else if (rot > 135 && rot < 225)
+            }else if (rot > 135 && rot < 225)
+            {
                 other.gameObject.transform.parent.position = new Vector2(x, y + dist);
-            else if (rot > 225 && rot < 315)
+            }else if (rot > 225 && rot < 315)
+            {
                 other.gameObject.transform.parent.position = new Vector2(x - dist, y);
+            }
             else
+            {
                 other.gameObject.transform.parent.position = new Vector2(x, y - dist);
-            //Que coja el padre del other y lo mueva a la posicion de la otra -1 en y
+            } // Coje el padre del other y lo mueve a la posicion de la otra -1 en y
 
             enReposo = true;
             Invoke(nameof(CancelReposo), reposo);
 
+            // Efectos de sonido
             clonSonidoVentilacion = Instantiate(sonidoVentilacion);
             clonSonidoVentilacion.Play();
             Destroy(clonSonidoVentilacion, 2f);

@@ -8,17 +8,17 @@ public class BarraPosesion : MonoBehaviour
     public RectTransform zonaVerde;
     public float off;
 
-    //Posicion inicial de la flecha para volver a ella cuando acabe
+    // Posicion inicial de la flecha para volver a ella cuando acabe
     RectTransform ini;
 
-    //Grosor de la barra para saber hasta donde debe llegar la flecha
+    // Grosor de la barra para saber hasta donde debe llegar la flecha
     float barWidth, greenWidth;
 
-    //posicion de la flecha en x en todo momento
+    // Posicion de la flecha en x en todo momento
     float flec;
 
-    //acabo es para decirle al update que deje de mover la flecha cuando ha acabado
-    //dir determinara que direccion toma la flecha
+    // Acabo es para decirle al update que deje de mover la flecha cuando ha acabado
+    // Dir determinara que direccion toma la flecha
     bool acabo;
     int dir;
 
@@ -34,13 +34,11 @@ public class BarraPosesion : MonoBehaviour
         acabo = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Si esta activado y no ha acabado...
         if (this.gameObject.activeSelf && !acabo)
         {
-
             //Determinamos que direccion toma la flecha comparando la posicion con el grosor de la barra
             if (flec >= barWidth)
             {
@@ -81,17 +79,22 @@ public class BarraPosesion : MonoBehaviour
 
                 //Dependiendo si la flecha esta tocando la zona verde...
                 if (flec >= -greenWidth && flec <= greenWidth)
+                {
                     //Llama a posee con 1 (posee al enemigo)
                     posesionController.Posee(1);
+                }
                 else
+                {
                     //Falla la posesion
                     posesionController.Posee(2);
+                }
 
                 //Devuelve todo a la normalidad al segundo
                 Invoke(nameof(Deactive), 1);
             }
         }
     }
+
     //Devuelve todo a la normalidad
     void Deactive()
     {

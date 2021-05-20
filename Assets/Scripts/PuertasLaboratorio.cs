@@ -27,6 +27,8 @@ public class PuertasLaboratorio : MonoBehaviour
             {
                 PuertaCerrada.sprite = PuertaAbierta;
                 GetComponent<Collider2D>().enabled = false;
+
+                // Efectos de sonido
                 clonSonidoAbrirPuertaLab = (AudioSource)AudioSource.Instantiate(sonidoAbrirPuertaLab);
                 clonSonidoAbrirPuertaLab.Play();
                 Destroy(clonSonidoAbrirPuertaLab, 1f);

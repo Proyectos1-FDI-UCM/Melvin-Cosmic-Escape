@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class WayPoints : MonoBehaviour
 {
-    
-
     [SerializeField] List<Transform> wayPoints;
 
     float velocity = 2;
@@ -13,13 +11,6 @@ public class WayPoints : MonoBehaviour
 
     byte nextPosition = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, wayPoints[nextPosition].transform.position, velocity * Time.deltaTime);

@@ -10,15 +10,23 @@ public class MenuPrincipal : MonoBehaviour
         opciones.SetActive(false);
         salir.SetActive(false);
     }
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("escape"))
         {
-            //Compruebo si esta activado el GameObject con .activeInHierarchy
-            if (opciones.activeInHierarchy) { opciones.SetActive(false); botonesiniciales.SetActive(true); }
-            else if (salir.activeInHierarchy) { salir.SetActive(false); botonesiniciales.SetActive(true); }
-            else if (!opciones.activeInHierarchy) { salir.SetActive(true);botonesiniciales.SetActive(false); }
+            // Compruebo si esta activado el GameObject con .activeInHierarchy
+            if (opciones.activeInHierarchy) 
+            { 
+                opciones.SetActive(false); botonesiniciales.SetActive(true); 
+            }
+            else if (salir.activeInHierarchy) 
+            { 
+                salir.SetActive(false); botonesiniciales.SetActive(true); 
+            }
+            else if (!opciones.activeInHierarchy) 
+            { 
+                salir.SetActive(true);botonesiniciales.SetActive(false); 
+            }
         }
     }
     public void Exit()

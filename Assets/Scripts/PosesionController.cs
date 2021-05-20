@@ -20,7 +20,7 @@ public class PosesionController : MonoBehaviour
 
     public GameObject fuerte;
     public GameObject fuerteEne;
-    //Hay que declarar: el prefab del enemigo de dentro de player y el prefab del enemigo por su cuenta para cada uno
+    // Hay que declarar: el prefab del enemigo de dentro de player y el prefab del enemigo por su cuenta para cada uno
 
     private GameObject other;
     int opc;
@@ -45,22 +45,20 @@ public class PosesionController : MonoBehaviour
         {
             other = collision2D.gameObject;
 
-            //Llamamos al Uimanager para que inicie el proceso
+            // Llamamos al Uimanager para que inicie el proceso
             uiManager.BarraPosesion();
-
         }
     }
 
     public void Posee(int opc)
     {
-        //Declaramos enProceso a true y tras el reposo vuelve a false, para controlar cuando puede poseer(se puede quitar sin mucho problema)
+        // Declaramos enProceso a true y tras el reposo vuelve a false, para controlar cuando puede poseer(se puede quitar sin mucho problema)
         enProceso = true;
         Invoke(nameof(FinCooldown), reposoTrasPoseer);
 
-        //Si le llega 1 ocurre la posesion normal
+        // Si le llega 1 ocurre la posesion normal
         if (opc == 1)
         {
-
             anim.SetTrigger("Posee");
 
             switch (other.layer)
@@ -127,11 +125,13 @@ public class PosesionController : MonoBehaviour
                     //Se añade un case de este mismo estilo para cada enemigo
             }
 
+            // Efectos de sonido
             clonSonidoPosesion = Instantiate(sonidoPosesion);
             clonSonidoPosesion.Play();
             Destroy(clonSonidoPosesion, 1f);
         }
-        //He modificado el CurarVida para que tambien acepte valores negativos y no pete
+
+        // Modificado CurarVida para que tambien acepte valores negativos
         else if (opc == 2)
         {
             GameManager.GetInstance().CurarVida(-30);
@@ -154,6 +154,7 @@ public class PosesionController : MonoBehaviour
 
     public void Desposeer()
     {
+        // Caso por cada enemigo
         if (cientifico.activeSelf)
         {
             cientifico.SetActive(false);
@@ -169,7 +170,6 @@ public class PosesionController : MonoBehaviour
             fuerte.SetActive(false);
             Instantiate(fuerteEne, transform.position, transform.rotation);
         }
-        //Y aqui mas else ifs para cada enemigo
 
         melvin.SetActive(true);
         Invoke("ConfirmarDesposesion", reposoTrasPoseer);

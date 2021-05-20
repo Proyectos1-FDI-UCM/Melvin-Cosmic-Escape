@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DestroyGlopOnCollision : MonoBehaviour
 {
-    //Variable del Game Manager
+    // Variable del Game Manager
     private GameManager gameManager;
 
     private void Start()
-    { //Acceso a la info del GameManager
+    { // Acceso a la info del GameManager
         gameManager = GameManager.GetInstance();
     }
 

@@ -27,6 +27,8 @@ public class PuertasBlindadas : MonoBehaviour
             {
                 PuertaCerradaB.sprite = PuertaAbiertaB;
                 GetComponent<Collider2D>().enabled = false;
+
+                // Efectos de sonido
                 clonSonidoAbrirPuerta = (AudioSource)AudioSource.Instantiate(sonidoAbrirPuerta);
                 clonSonidoAbrirPuerta.Play();
                 Destroy(clonSonidoAbrirPuerta, 1f);

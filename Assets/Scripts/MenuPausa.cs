@@ -7,8 +7,8 @@ public class MenuPausa : MonoBehaviour
 {
     public GameObject Menu;
     public Button boton;
-    bool pause=false;
-    // Start is called before the first frame update
+    bool pause = false;
+
     void Start()
     {
         Menu.SetActive(false);
@@ -16,7 +16,6 @@ public class MenuPausa : MonoBehaviour
         Cursor.visible= false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("escape"))         

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-
     [SerializeField] GameObject bala;
     [SerializeField] GameObject prefabCampo;
     CampoDeVision campo;
@@ -18,8 +17,9 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
+        // Origen y direccion del campo de visión
         campo.Origen(this.transform.position);
-        campo.Direccion(this.transform.rotation.eulerAngles); // dirección del fov
+        campo.Direccion(this.transform.rotation.eulerAngles); 
 
         if (!retardo && campo.melvinEncontrado)
         {

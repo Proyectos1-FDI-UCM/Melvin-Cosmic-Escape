@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Cohete : MonoBehaviour
 {
-
     GameManager gm;
-
 
     private void Start()
     {
          gm = GameManager.GetInstance();
-
     }
 
     private void OnCollisionStay2D(Collision2D collision)

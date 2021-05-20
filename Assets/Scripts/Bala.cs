@@ -8,12 +8,9 @@ public class Bala : MonoBehaviour
     public AudioSource sonidoDisparo;
     AudioSource clonSonidoDisparo;
 
-    Rigidbody2D bulletfisica;
-
     GameManager gm;
-
     Vector2 melvin;
-    // Acceso a componente Rigidbody
+
     void Start()
     {
         gm = GameManager.GetInstance();
@@ -22,8 +19,6 @@ public class Bala : MonoBehaviour
         clonSonidoDisparo = Instantiate(sonidoDisparo);
         clonSonidoDisparo.Play();
         Destroy(clonSonidoDisparo, 1f);
-
-        // bulletfisica = GetComponent<Rigidbody2D>();
     }
 
     // Se establece el desplazamiento de la bala.

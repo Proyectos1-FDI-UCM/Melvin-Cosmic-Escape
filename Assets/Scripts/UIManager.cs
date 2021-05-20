@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    // Variables de la interfaz
     public float vidaMax, vidaActual;
     public Image barraVida;
     public Text numVida;
@@ -15,6 +16,7 @@ public class UIManager : MonoBehaviour
     public BarraPosesion barraPosesion;
     bool fin = false;
 
+    // Variables para los efectos de sonido
     public AudioSource sonidoPerderVida;
     AudioSource clonSonidoPerderVida;
     public AudioSource sonidoPerder;
@@ -30,6 +32,7 @@ public class UIManager : MonoBehaviour
         PanelGanar.SetActive(false);
         PanelPerder.SetActive(false);
     }
+
     //Metodo con el cual actualizamos la barra de vida junto a su porcentaje
     public void takeDamage(float vidaActual, float vidaMax, bool pierdeVida, bool ganaVida)
     {
@@ -45,7 +48,7 @@ public class UIManager : MonoBehaviour
         barraVida.fillAmount = vidaActual / vidaMax;
         numVida.text = vidaActual.ToString()+"%";
 
-        // Condiciones para la reproducción de sfx
+        // Condiciones para la reproducción de efectos de sonido
         if (pierdeVida)
         {
             clonSonidoPerderVida = (AudioSource)AudioSource.Instantiate(sonidoPerderVida);
@@ -60,7 +63,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    //Método que cambia de escena
+    // Método que cambia de escena
     public void ChangeScene(string sceneName)
     {
         Time.timeScale = 1;
@@ -82,9 +85,6 @@ public class UIManager : MonoBehaviour
     {
         PanelPerder.SetActive(true);
         Invoke("Fuera", 3);
-
-
-
         gm.Pausa(true);
     }
 
@@ -106,10 +106,10 @@ public class UIManager : MonoBehaviour
 
     public void BarraPosesion()
     {
-        //Pausa el juego
+        // Pausa el juego
         GameManager.GetInstance().Pausa(true);
 
-        //Activa la barra de posesion que a su vez iniciara todo su tinglado
+        // Activa la barra de posesion que a su vez iniciara todo su proceso
         barraPosesion.gameObject.SetActive(true);
     }
 

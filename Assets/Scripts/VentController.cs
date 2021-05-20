@@ -10,7 +10,8 @@ public class VentController : MonoBehaviour
 
     void Awake()
     {
-        this.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = spritesVent[numVent - 1]; //Importante colocar los sprites en orden
+        //Importante colocar los sprites en orden
+        this.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = spritesVent[numVent - 1]; 
         this.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = spritesVent[numVent - 1];
     }
 }
