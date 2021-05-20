@@ -60,6 +60,11 @@ public class MelvinController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.T) && posesionController.poseyendo)
                 posesionController.Desposeer();
+            else if (Input.GetKey(KeyCode.E))
+            {
+                if (fue.activeSelf)
+                    fuerte.SetTrigger("gorpe");
+            }
         }
         else
         {

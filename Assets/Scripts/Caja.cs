@@ -12,6 +12,7 @@ public class Caja : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && collision.gameObject.GetComponentInChildren<EnemigoFuerte>())
         {
+
             caja.SetTrigger("Destruye");
 
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
