@@ -598,6 +598,18 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1128180669}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &691654656 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1442826680254795844, guid: 3affd1484da63e9468fd09da58e0e7c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1128180669}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3105e2ce694eb694c81d5a6626c4d41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &696553087 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4062726788927698737, guid: 1517a7f97e444504e81ee38e081982ec,
@@ -8923,6 +8935,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Charco
       objectReference: {fileID: 0}
+    - target: {fileID: 7683701432283733743, guid: fca5154683d59b34c8bf836763ef9a15,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.018431664
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683701432283733743, guid: fca5154683d59b34c8bf836763ef9a15,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.594511
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683701432283733743, guid: fca5154683d59b34c8bf836763ef9a15,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.009215355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683701432283733743, guid: fca5154683d59b34c8bf836763ef9a15,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.6866684
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fca5154683d59b34c8bf836763ef9a15, type: 3}
 --- !u!4 &1941351791 stripped
@@ -9365,6 +9397,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 691654656}
+    - target: {fileID: 4062726788927698737, guid: 1517a7f97e444504e81ee38e081982ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: botonCursor
       objectReference: {fileID: 0}
     - target: {fileID: 4062726789223087855, guid: 1517a7f97e444504e81ee38e081982ec,
         type: 3}
@@ -9399,7 +9436,7 @@ PrefabInstance:
     - target: {fileID: 8250255379991033064, guid: 1517a7f97e444504e81ee38e081982ec,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2312319024471635479, guid: 1517a7f97e444504e81ee38e081982ec, type: 3}

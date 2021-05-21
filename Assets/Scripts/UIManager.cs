@@ -43,23 +43,23 @@ public class UIManager : MonoBehaviour
             Perder();
             clonSonidoPerder = (AudioSource)AudioSource.Instantiate(sonidoPerder);
             clonSonidoPerder.Play();
-            Destroy(clonSonidoPerder, 3f);
+            Destroy(clonSonidoPerder.gameObject, 3f);
         }
         barraVida.fillAmount = vidaActual / vidaMax;
-        numVida.text = vidaActual.ToString()+"%";
+        numVida.text = vidaActual.ToString();
 
         // Condiciones para la reproducción de efectos de sonido
         if (pierdeVida)
         {
             clonSonidoPerderVida = (AudioSource)AudioSource.Instantiate(sonidoPerderVida);
             clonSonidoPerderVida.Play();
-            Destroy(clonSonidoPerderVida, 1f);
+            Destroy(clonSonidoPerderVida.gameObject, 1f);
         }
         else if (ganaVida)
         {
             clonSonidoGanarVida = (AudioSource)AudioSource.Instantiate(sonidoGanarVida);
             clonSonidoGanarVida.Play();
-            Destroy(clonSonidoGanarVida, 2f);
+            Destroy(clonSonidoGanarVida.gameObject, 2f);
         }
     }
 

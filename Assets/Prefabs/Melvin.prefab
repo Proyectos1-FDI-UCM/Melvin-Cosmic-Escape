@@ -97,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.33218002, y: -1.9101734}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,8 +108,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 39.840004, y: 41.928223}
-  m_EdgeRadius: 0
+  m_Size: {x: 32.199413, y: 35.78248}
+  m_EdgeRadius: 0.01
 --- !u!114 &2214251374855733010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.1689136, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -249,8 +249,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.17, y: 1.94}
-  m_EdgeRadius: 0
+  m_Size: {x: 2.3465466, y: 1.6655154}
+  m_EdgeRadius: 0.01
 --- !u!114 &968930132654156330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,9 +386,9 @@ MonoBehaviour:
   fuerte: {fileID: 7417208934707175637}
   fuerteEne: {fileID: 1471436193357200606, guid: e3d1981b4665db74eb1b82a5a1840668,
     type: 3}
+  poseyendo: 0
   sonidoPosesion: {fileID: 1293928082739154925, guid: c76766d419a9faa4db5cfa32a70f804b,
     type: 3}
-  poseyendo: 0
 --- !u!95 &6263565995468151061
 Animator:
   serializedVersion: 3
@@ -571,7 +571,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.30612087, y: -1.2856894}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -582,8 +582,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 17.77412, y: 48.15}
-  m_EdgeRadius: 0
+  m_Size: {x: 16.672094, y: 44.599037}
+  m_EdgeRadius: 0.01
 --- !u!1 &7417208934707175637
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +681,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.49306297, y: -0.88526154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -692,8 +692,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 44.088634, y: 52.68}
-  m_EdgeRadius: 0
+  m_Size: {x: 32.36546, y: 44.296013}
+  m_EdgeRadius: 0.01
 --- !u!114 &4539716286783360718
 MonoBehaviour:
   m_ObjectHideFlags: 0

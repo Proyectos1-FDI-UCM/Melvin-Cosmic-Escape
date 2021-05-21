@@ -31,7 +31,7 @@ public class PuertasLaboratorio : MonoBehaviour
                 // Efectos de sonido
                 clonSonidoAbrirPuertaLab = (AudioSource)AudioSource.Instantiate(sonidoAbrirPuertaLab);
                 clonSonidoAbrirPuertaLab.Play();
-                Destroy(clonSonidoAbrirPuertaLab, 1f);
+                Destroy(clonSonidoAbrirPuertaLab.gameObject, 1f);
             }
         }
     }

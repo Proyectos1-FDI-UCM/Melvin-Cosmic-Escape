@@ -128,7 +128,7 @@ public class PosesionController : MonoBehaviour
             // Efectos de sonido
             clonSonidoPosesion = Instantiate(sonidoPosesion);
             clonSonidoPosesion.Play();
-            Destroy(clonSonidoPosesion, 1f);
+            Destroy(clonSonidoPosesion.gameObject, 1f);
         }
 
         // Modificado CurarVida para que tambien acepte valores negativos

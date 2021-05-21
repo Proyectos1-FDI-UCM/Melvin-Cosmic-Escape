@@ -18,7 +18,7 @@ public class Bala : MonoBehaviour
 
         clonSonidoDisparo = Instantiate(sonidoDisparo);
         clonSonidoDisparo.Play();
-        Destroy(clonSonidoDisparo, 1f);
+        Destroy(clonSonidoDisparo.gameObject, 1f);
     }
 
     // Se establece el desplazamiento de la bala.

@@ -22,7 +22,7 @@ public class Caja : MonoBehaviour
             // Efectos de sonido
             clonSonidoCaja = (AudioSource)AudioSource.Instantiate(sonidoCaja);
             clonSonidoCaja.Play();
-            Destroy(clonSonidoCaja, 3f);
+            Destroy(clonSonidoCaja.gameObject, 3f);
         }
     }
 }

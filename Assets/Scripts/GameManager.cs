@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject melvin;
     // Variables de la vida del jugador
     float vidaMaxima = 100;
-    float vidaActual = 100;
+    public float vidaActual = 100;
     
     // Variables del poder del jugador
     public int poderHabilidad = 0;
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         if (!pausa)
         {
             glopsFusionados++;
-            vidaMaxima++;
+            vidaMaxima += 10;
             vidaActual = vidaMaxima;
             poderHabilidad += 10;
 

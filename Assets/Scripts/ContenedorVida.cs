@@ -18,7 +18,7 @@ public class ContenedorVida : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (Input.GetKey(KeyCode.E) && !usado)
+        if (Input.GetKey(KeyCode.E) && !usado && collision.gameObject.GetComponent<MelvinGrowth>())
         {
             usado = true;
             gm.CurarVida(vidaCurada);

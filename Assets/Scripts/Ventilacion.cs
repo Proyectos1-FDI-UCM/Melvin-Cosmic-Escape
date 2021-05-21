@@ -56,7 +56,7 @@ public class Ventilacion : MonoBehaviour
             // Efectos de sonido
             clonSonidoVentilacion = Instantiate(sonidoVentilacion);
             clonSonidoVentilacion.Play();
-            Destroy(clonSonidoVentilacion, 2f);
+            Destroy(clonSonidoVentilacion.gameObject, 2f);
 
         }
     }

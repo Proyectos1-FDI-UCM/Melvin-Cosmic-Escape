@@ -21,7 +21,7 @@ public class Shooter : MonoBehaviour
         campo.Origen(this.transform.position);
         campo.Direccion(this.transform.rotation.eulerAngles); 
 
-        if (!retardo && campo.melvinEncontrado)
+        if (!retardo && campo.melvinEncontrado && !GameManager.GetInstance().pausa)
         {
             Instantiate(bala, transform.position, transform.rotation);
             //Debug.Log("Bala disparada");

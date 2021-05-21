@@ -31,7 +31,7 @@ public class PuertasBlindadas : MonoBehaviour
                 // Efectos de sonido
                 clonSonidoAbrirPuerta = (AudioSource)AudioSource.Instantiate(sonidoAbrirPuerta);
                 clonSonidoAbrirPuerta.Play();
-                Destroy(clonSonidoAbrirPuerta, 1f);
+                Destroy(clonSonidoAbrirPuerta.gameObject, 1f);
             }
         }
     }

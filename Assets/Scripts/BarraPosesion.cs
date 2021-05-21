@@ -100,6 +100,10 @@ public class BarraPosesion : MonoBehaviour
     {
         flecha.GetComponent<RectTransform>().position = ini.position;
         this.gameObject.SetActive(false);
-        GameManager.GetInstance().Pausa(false);
+
+        if(GameManager.GetInstance().vidaActual > 0)
+        {
+            GameManager.GetInstance().Pausa(false);
+        }
     }
 }
