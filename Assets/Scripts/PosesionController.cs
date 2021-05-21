@@ -154,19 +154,23 @@ public class PosesionController : MonoBehaviour
 
     public void Desposeer()
     {
+
         // Caso por cada enemigo
         if (cientifico.activeSelf)
         {
+            anim.SetTrigger("Posee");
             cientifico.SetActive(false);
             Instantiate(cientificoEne, transform.position, transform.rotation).GetComponent<EnemigoCientifico>().numCientifico = cientif;
         }
         else if (acido.activeSelf)
         {
+            anim.SetTrigger("Posee");
             acido.SetActive(false);
             Instantiate(acidoEne, transform.position, transform.rotation);
         }
         else if (fuerte.activeSelf)
         {
+            anim.SetTrigger("Posee");
             fuerte.SetActive(false);
             Instantiate(fuerteEne, transform.position, transform.rotation);
         }

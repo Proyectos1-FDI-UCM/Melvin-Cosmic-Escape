@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 9895bf0e93713ee42beac3d5d6900979
+guid: 6b21659b2116d5d4782f52ef828a709a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -737826165887724154
-    second: Nuvemelvin_0
+      213: 2899611960686194947
+    second: Nuvemelvin1_0
   - first:
-      213: 8714024365718831460
-    second: Nuvemelvin_1
+      213: -1994779814332894389
+    second: Nuvemelvin1_1
   - first:
-      213: -1631482106149105021
-    second: Nuvemelvin_2
+      213: -9163677907658494494
+    second: Nuvemelvin1_2
   - first:
-      213: -7625446526337644753
-    second: Nuvemelvin_3
+      213: -4994643600902708502
+    second: Nuvemelvin1_3
   - first:
-      213: -3811279530551805971
-    second: Nuvemelvin_4
+      213: 2930817369228449598
+    second: Nuvemelvin1_4
   - first:
-      213: -3974123938175427061
-    second: Nuvemelvin_5
+      213: -8246476938399389461
+    second: Nuvemelvin1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nuvemelvin_0
+      name: Nuvemelvin1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,20 +113,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6851644e207b2c5f0800000000000000
-      internalID: -737826165887724154
+      spriteID: 301bc2727bd7d3820800000000000000
+      internalID: 2899611960686194947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuvemelvin_1
+      name: Nuvemelvin1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -134,20 +134,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46105c2edfe6ee870800000000000000
-      internalID: 8714024365718831460
+      spriteID: b437191e35e1154e0800000000000000
+      internalID: -1994779814332894389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuvemelvin_2
+      name: Nuvemelvin1_2
       rect:
         serializedVersion: 2
         x: 0
@@ -155,20 +155,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 382939d1bafcb59e0800000000000000
-      internalID: -1631482106149105021
+      spriteID: 2edabe58e7314d080800000000000000
+      internalID: -9163677907658494494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuvemelvin_3
+      name: Nuvemelvin1_3
       rect:
         serializedVersion: 2
         x: 64
@@ -176,20 +176,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2788ef19c8fc2690800000000000000
-      internalID: -7625446526337644753
+      spriteID: ae224849b167faab0800000000000000
+      internalID: -4994643600902708502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuvemelvin_4
+      name: Nuvemelvin1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -197,20 +197,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de7fdb1c57d9b1bc0800000000000000
-      internalID: -3811279530551805971
+      spriteID: e3718628eda5ca820800000000000000
+      internalID: 2930817369228449598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuvemelvin_5
+      name: Nuvemelvin1_5
       rect:
         serializedVersion: 2
         x: 64
@@ -218,14 +218,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0e5da3855319d8c0800000000000000
-      internalID: -3974123938175427061
+      spriteID: be8e04e8ae0ae8d80800000000000000
+      internalID: -8246476938399389461
       vertices: []
       indices: 
       edges: []
