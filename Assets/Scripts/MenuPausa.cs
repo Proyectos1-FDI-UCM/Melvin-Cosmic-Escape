@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MenuPausa : MonoBehaviour
 {
+    public BarraPosesion scriptBarra;
     public GameObject Menu;
     public Button boton;
     bool pause = false;
@@ -35,6 +36,10 @@ public class MenuPausa : MonoBehaviour
                 AudioListener.volume = 0;
                 Cursor.visible = true;
                 Menu.SetActive(true);
+                if (scriptBarra.gameObject.activeSelf)
+                {
+                    scriptBarra.Deactive();
+                }
             }
         }      
     }

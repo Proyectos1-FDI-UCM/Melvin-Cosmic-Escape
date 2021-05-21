@@ -96,7 +96,7 @@ public class BarraPosesion : MonoBehaviour
     }
 
     //Devuelve todo a la normalidad
-    void Deactive()
+    public void Deactive()
     {
         flecha.GetComponent<RectTransform>().position = ini.position;
         this.gameObject.SetActive(false);
