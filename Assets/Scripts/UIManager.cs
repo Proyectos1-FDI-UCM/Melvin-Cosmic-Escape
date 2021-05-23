@@ -76,6 +76,7 @@ public class UIManager : MonoBehaviour
 
     public void Ganar()
     {
+        gm.Pausa(true);
         PanelGanar.SetActive(true);
         fin = true;
         Invoke("Fuera", 3);

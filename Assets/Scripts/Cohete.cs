@@ -6,7 +6,6 @@ public class Cohete : MonoBehaviour
 {
     GameManager gm;
     public GameObject cinematicaFinal;
-
     private void Start()
     {
          gm = GameManager.GetInstance();
@@ -17,12 +16,10 @@ public class Cohete : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             gm.GanarPartida();
-            cinematicaFinal.SetActive(true);
-        }
-    }
+            GameObject cinematica = (GameObject)GameObject.Instantiate(cinematicaFinal);
+            cinematica.transform.position = gm.melvin.transform.position;
 
-    void DesactivaCinematica()
-    {
-        cinematicaFinal.SetActive(false);
+            Destroy(cinematica.gameObject, 3f);
+        }
     }
 }
