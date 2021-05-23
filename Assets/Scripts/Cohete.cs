@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cohete : MonoBehaviour
 {
     GameManager gm;
+    public GameObject cinematicaFinal;
 
     private void Start()
     {
@@ -16,6 +17,12 @@ public class Cohete : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             gm.GanarPartida();
+            cinematicaFinal.SetActive(true);
         }
+    }
+
+    void DesactivaCinematica()
+    {
+        cinematicaFinal.SetActive(false);
     }
 }
