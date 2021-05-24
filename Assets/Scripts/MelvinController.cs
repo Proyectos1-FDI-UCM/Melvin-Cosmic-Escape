@@ -68,6 +68,7 @@ public class MelvinController : MonoBehaviour
                 if (fue.activeSelf)
                 {
                     fuerte.SetTrigger("gorpe");
+                    Debug.Log("Golpe");
                 }
             }
         }

@@ -264,6 +264,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &77723393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4062726788533690409, guid: 1517a7f97e444504e81ee38e081982ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003163273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77723390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb4686477c69d742a2fcfd0bdfaa829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &95558521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1745,7 +1757,7 @@ PrefabInstance:
         type: 3}
       propertyPath: uiManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 77723393}
     - target: {fileID: 7417208934447278595, guid: 25ae58818f169884c9caf46c97127100,
         type: 3}
       propertyPath: m_Name
