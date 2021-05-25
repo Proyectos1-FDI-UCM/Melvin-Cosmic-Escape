@@ -22,15 +22,15 @@ public class UIManager : MonoBehaviour
     public AudioSource sonidoPerder;
     AudioSource clonSonidoPerder;
     public AudioSource sonidoGanarVida;
-    AudioSource clonSonidoGanarVida;
-
-
+    AudioSource clonSonidoGanarVida;   
+    
     void Start()
     {
         gm = GameManager.GetInstance();
         GameManager.GetInstance().SetUIManager(this);
         PanelGanar.SetActive(false);
         PanelPerder.SetActive(false);
+       
     }
 
     //Metodo con el cual actualizamos la barra de vida junto a su porcentaje
@@ -68,7 +68,9 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
+        
     }    
+     
     public void Exit()
     {
         Application.Quit();
