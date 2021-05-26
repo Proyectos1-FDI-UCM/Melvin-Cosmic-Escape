@@ -19,7 +19,7 @@ public class Cohete : MonoBehaviour
             GameObject cinematica = (GameObject)GameObject.Instantiate(cinematicaFinal);
             cinematica.transform.position = gm.melvin.transform.position;
 
-            Destroy(cinematica.gameObject, 3f);
+            Destroy(cinematica.gameObject, 5f);
         }
     }
 }
