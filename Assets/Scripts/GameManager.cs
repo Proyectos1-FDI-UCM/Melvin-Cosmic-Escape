@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     // Array que contiene los niveles del juego, se controla desde el editor
     public string[] scenesInOrder;
 
-    public bool pausa;
+    public bool pausa = true;
 
     // Variable que almacena la instancia del GameManager
     private static GameManager instance;
