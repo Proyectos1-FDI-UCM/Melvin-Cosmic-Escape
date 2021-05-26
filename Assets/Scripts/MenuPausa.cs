@@ -9,6 +9,9 @@ public class MenuPausa : MonoBehaviour
     public GameObject Menu;
     public Button boton;
     bool pause = false;
+    public DesactivarCinematica cinematica;
+    public DesactivarPanelNivel panel;
+
     void Start()
     {
         Menu.SetActive(false);
@@ -18,7 +21,7 @@ public class MenuPausa : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("escape"))         
+        if (Input.GetKeyDown("escape") && (!cinematica.cinematicaActiva) && (!panel.panelActivo))         
         {
             if (pause)
             {

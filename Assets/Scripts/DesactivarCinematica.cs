@@ -5,12 +5,14 @@ using UnityEngine;
 public class DesactivarCinematica : MonoBehaviour
 {
     public float tiempoDesactivar;
+    public bool cinematicaActiva = false;
     public GameObject panel;
     public GameObject videoPlayer;
 
     void Start()
     {
         this.enabled = true;
+        cinematicaActiva = true;
         Invoke("Desactivar", tiempoDesactivar);
     }
 
@@ -30,6 +32,7 @@ public class DesactivarCinematica : MonoBehaviour
         //Debug.Log("Desactivar llamado.");
         this.gameObject.SetActive(false);
         videoPlayer.SetActive(false);
+        cinematicaActiva = false;
         Invoke("DesactivarPanel", 2f);
     }
 
