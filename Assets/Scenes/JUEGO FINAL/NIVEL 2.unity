@@ -3070,6 +3070,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.068672694
       objectReference: {fileID: 0}
+    - target: {fileID: 6475257998435188688, guid: fc1bffb29880b9e489e8d56ab0694fc3,
+        type: 3}
+      propertyPath: sonidoCaja
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc1bffb29880b9e489e8d56ab0694fc3, type: 3}
 --- !u!4 &715571919 stripped
@@ -4831,16 +4836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: aefa37deef91c4c44bf5131ea8a078a4, type: 3}
+      objectReference: {fileID: 8300000, guid: f98ca159a40f93a4db1e0e82f9566ca8, type: 3}
     - target: {fileID: 3682750447859963843, guid: 323b3fe35a8a5454e93518bf27e8f1a9,
         type: 3}
       propertyPath: m_Name
       value: Musica
-      objectReference: {fileID: 0}
-    - target: {fileID: 3682750447859963843, guid: 323b3fe35a8a5454e93518bf27e8f1a9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 323b3fe35a8a5454e93518bf27e8f1a9, type: 3}
@@ -5037,6 +5037,16 @@ PrefabInstance:
       propertyPath: Panel
       value: 
       objectReference: {fileID: 1573827422}
+    - target: {fileID: 1442826680254795844, guid: 3affd1484da63e9468fd09da58e0e7c6,
+        type: 3}
+      propertyPath: cinematica
+      value: 
+      objectReference: {fileID: 4062726788646185867}
+    - target: {fileID: 1442826680254795844, guid: 3affd1484da63e9468fd09da58e0e7c6,
+        type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 1573827424}
     - target: {fileID: 4395410939639128011, guid: 3affd1484da63e9468fd09da58e0e7c6,
         type: 3}
       propertyPath: m_Name
@@ -16015,6 +16025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037f56a6c561d914590ce07ba2d3d3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelActivo: 0
 --- !u!1 &1578096621 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7305450413497074137, guid: af8eee3fe066f794ba5c635191291e8f,
@@ -17993,3 +18004,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4062726788646185865}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4062726788646185867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8646076292988419333, guid: 1517a7f97e444504e81ee38e081982ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 4062726788646185865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d632936da0d4ffe4aa6fa78760b9171e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

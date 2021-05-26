@@ -33,6 +33,7 @@ public class DesactivarCinematica : MonoBehaviour
         this.gameObject.SetActive(false);
         videoPlayer.SetActive(false);
         cinematicaActiva = false;
+        panel.SetActive(true);
         Invoke("DesactivarPanel", 2f);
     }
 

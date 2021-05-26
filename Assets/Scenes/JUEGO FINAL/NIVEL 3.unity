@@ -8222,6 +8222,30 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1003163273}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1003163275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2312319023307869241, guid: 1517a7f97e444504e81ee38e081982ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003163273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fddf0dd4e6885c54eb63b9f5e8fa9432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1003163276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8646076292988419333, guid: 1517a7f97e444504e81ee38e081982ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003163273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d632936da0d4ffe4aa6fa78760b9171e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1014077851
 GameObject:
   m_ObjectHideFlags: 0
@@ -9034,7 +9058,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: aefa37deef91c4c44bf5131ea8a078a4, type: 3}
+      objectReference: {fileID: 8300000, guid: f98ca159a40f93a4db1e0e82f9566ca8, type: 3}
     - target: {fileID: 3682750447859963843, guid: 323b3fe35a8a5454e93518bf27e8f1a9,
         type: 3}
       propertyPath: m_Name
@@ -9043,7 +9067,7 @@ PrefabInstance:
     - target: {fileID: 3682750447859963843, guid: 323b3fe35a8a5454e93518bf27e8f1a9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 323b3fe35a8a5454e93518bf27e8f1a9, type: 3}
@@ -9225,6 +9249,21 @@ PrefabInstance:
       propertyPath: Panel
       value: 
       objectReference: {fileID: 2086207791}
+    - target: {fileID: 1442826680254795844, guid: 3affd1484da63e9468fd09da58e0e7c6,
+        type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 2086207792}
+    - target: {fileID: 1442826680254795844, guid: 3affd1484da63e9468fd09da58e0e7c6,
+        type: 3}
+      propertyPath: cinematica
+      value: 
+      objectReference: {fileID: 1003163276}
+    - target: {fileID: 1442826680254795844, guid: 3affd1484da63e9468fd09da58e0e7c6,
+        type: 3}
+      propertyPath: scriptBarra
+      value: 
+      objectReference: {fileID: 1003163275}
     - target: {fileID: 4395410939639128011, guid: 3affd1484da63e9468fd09da58e0e7c6,
         type: 3}
       propertyPath: m_Name
@@ -33111,6 +33150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037f56a6c561d914590ce07ba2d3d3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelActivo: 0
 --- !u!4 &2102850188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8401946171135658449, guid: 363d65737a5e91041b03d8dc057ac9cf,

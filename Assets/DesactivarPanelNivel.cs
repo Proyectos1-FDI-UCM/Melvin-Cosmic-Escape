@@ -5,7 +5,7 @@ using UnityEngine;
 public class DesactivarPanelNivel : MonoBehaviour
 {
     public bool panelActivo = false;
-    private void Start()
+    private void OnEnable()
     {
         panelActivo = true;
         Invoke("DesactivarPanel", 2f);

@@ -13,7 +13,10 @@ public class Caja : MonoBehaviour
         if (Input.GetKey(KeyCode.E) && collision.gameObject.GetComponentInChildren<EnemigoFuerte>())
         {
             // Animación
-            caja.SetTrigger("Destruye");
+            if (caja != null)
+            {
+                caja.SetTrigger("Destruye");
+            }
 
             // Destrucción del objeto
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
