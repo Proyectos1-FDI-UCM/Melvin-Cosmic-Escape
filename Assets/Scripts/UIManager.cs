@@ -76,6 +76,8 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
+
+    //Activamos el panel de victoria 
     public void Ganar()
     {
         gm.Pausa(true);
@@ -84,6 +86,8 @@ public class UIManager : MonoBehaviour
         Invoke("Fuera", 3);
 
     }
+
+    //Activamos el panel de derrota
     public void Perder()
     {
         PanelPerder.SetActive(true);
@@ -91,6 +95,8 @@ public class UIManager : MonoBehaviour
         gm.Pausa(true);
     }
 
+
+    //Desactivar los paneles y cambio a la escena correspondiente
     void Fuera()
     {
         PanelGanar.SetActive(false);

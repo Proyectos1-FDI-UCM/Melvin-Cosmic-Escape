@@ -10,9 +10,11 @@ public class Cohete : MonoBehaviour
          gm = GameManager.GetInstance();
     }
 
+
+    
     private void OnCollisionStay2D(Collision2D collision)
     {
-
+        //Interactuacion con Melvin
         if (Input.GetKey(KeyCode.E))
         {
             gm.GanarPartida();

@@ -111,12 +111,10 @@ public class GameManager : MonoBehaviour
             vidaActual = vidaActual + vidaCurada;
             SetUIManager(theUIManager);
             theUIManager.takeDamage(vidaActual, vidaMaxima, false, true);
-            Debug.Log("vida curada");
         }else if ((vidaCurada < 0) && (vidaActual < vidaMaxima && vidaCurada > 0) || (vidaActual > vidaCurada && vidaCurada < 0))
         {
             vidaActual = vidaActual + vidaCurada;
             theUIManager.takeDamage(vidaActual, vidaMaxima, true, false);
-            Debug.Log("vida perdida");
         }
     }
 
