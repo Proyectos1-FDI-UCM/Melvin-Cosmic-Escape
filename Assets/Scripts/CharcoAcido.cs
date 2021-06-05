@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharcoAcido : MonoBehaviour
 {
@@ -11,6 +9,8 @@ public class CharcoAcido : MonoBehaviour
         gm = GameManager.GetInstance();
     }
     
+
+    //Comprobación que Melvin esta poseyendo al enemigo ácido 
     private void OnTriggerStay2D(Collider2D collider2D)
     {
         if(collider2D.gameObject.GetComponentInChildren<EnemigoAcido>() == null)

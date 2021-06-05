@@ -3,7 +3,6 @@
 public class EnemigoCientifico : MonoBehaviour
 {
     public int numCientifico;
-
     public Sprite[] spritesCientificos = new Sprite[3];
 
     void OnEnable()

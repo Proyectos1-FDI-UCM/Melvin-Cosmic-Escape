@@ -13,9 +13,11 @@ public class Bala : MonoBehaviour
 
     void Start()
     {
+
         gm = GameManager.GetInstance();
         melvin = gm.PosicionDisparo();
-
+        
+        //Audio del disparo
         clonSonidoDisparo = Instantiate(sonidoDisparo);
         clonSonidoDisparo.Play();
         Destroy(clonSonidoDisparo.gameObject, 1f);
@@ -31,6 +33,8 @@ public class Bala : MonoBehaviour
         }
     }
 
+
+    //Colisión de la bala con Melvin
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.GetComponentInParent<MelvinController>())

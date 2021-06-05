@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+
+//Script unicamente utilizado para obtener su refenrencia
 public class EnemigoAcido : MonoBehaviour
 {
 }

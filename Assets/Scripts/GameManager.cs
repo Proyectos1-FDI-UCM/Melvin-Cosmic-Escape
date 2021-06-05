@@ -89,19 +89,23 @@ public class GameManager : MonoBehaviour
             vidaActual = 0;
             theUIManager.takeDamage(vidaActual, vidaMaxima, false, false);
             theUIManager.Perder();
-            Debug.Log(vidaActual);
         }
     }
 
     public void Impactarbala()
     {
+        //Actualización de la vida de Melvin
         vidaActual = vidaActual - 50;
+
+        //Representación por pantalla
         theUIManager.takeDamage(vidaActual, vidaMaxima, true, false);
     }
 
+
+    //Curar vida de Melvin
     public void CurarVida (int vidaCurada)
     {
-        Debug.Log(vidaCurada);
+  
         if ((vidaCurada > 0) && ((vidaActual < vidaMaxima && vidaCurada > 0) || (vidaActual > vidaCurada && vidaCurada < 0)))
         {
             vidaActual = vidaActual + vidaCurada;
@@ -116,6 +120,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    //Ganar partida
     public void GanarPartida ()
     {
         theUIManager.Ganar();
@@ -128,11 +134,15 @@ public class GameManager : MonoBehaviour
         pausa = pausaActiva;
     }
 
+
+    //Obtener la posicion de Melvin
     public Vector2 PosicionDisparo()
     {
         return melvin.transform.position;
     }
 
+
+    //Cambio de nivel
     public void PasarNivel(string nivel)
     {
         theUIManager.ChangeScene(nivel);

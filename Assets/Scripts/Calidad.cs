@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class Calidad : MonoBehaviour
@@ -45,7 +44,7 @@ public class Calidad : MonoBehaviour
         for (int i = 0; i < resoluciones.Length; i++)
         {
             // Creo la opcion
-            string opcion = resoluciones[i].width + "x" + resoluciones[i].height + "x" + resoluciones[i].refreshRate;
+            string opcion = resoluciones[i].width + "x" + resoluciones[i].height + "x" + resoluciones[i].refreshRate + "Hz";
             //Aado la opcion a la lista
             opciones.Add(opcion);
             // Miro hasta encontrar la resolucion q hay por defecto o esta guardada de antes
