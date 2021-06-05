@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Cohete : MonoBehaviour
 {
     GameManager gm;
     public GameObject cinematicaFinal;
+    
     private void Start()
     {
          gm = GameManager.GetInstance();
@@ -13,6 +12,7 @@ public class Cohete : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+
         if (Input.GetKey(KeyCode.E))
         {
             gm.GanarPartida();
